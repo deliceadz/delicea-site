@@ -1,133 +1,138 @@
-* {
-box-sizing: border-box;
-marge : 0 ;
+*{
+marge:0;
 marge intérieure : 0 ;
+box-sizing:border-box;
 }
 
-corps {
-police de caractères : Arial, sans-serif ;
+corps{
+police-family:'Cairo',sans-serif;
 arrière-plan : #F8F6F2 ;
-couleur : #3b302c ;
-hauteur de ligne : 1,6 ;
+marge intérieure : 20 px ;
+couleur : #2F2F2F;
 }
 
-en-tête {
-arrière-plan : #C62828 ;
-couleur : blanc ;
-text-align: centre;
-marge intérieure : 25px 15px ;
-}
-
-en-tête h1 {
-taille de police : 36 px ;
-}
-
-navigation {
-fond : blanc ;
-marge intérieure : 14 px ;
-text-align: centre;
-}
-
-navigation a {
-couleur : #6D4C41 ;
-text-decoration: aucune;
-marge : 0 10px ;
-police-weight: gras;
-}
-
-.héros {
-text-align: centre;
-marge intérieure : 70px 20px ;
-arrière-plan : #D9C3A3 ;
-}
-
-.hero h2 {
-taille de police : 34 px ;
-marge inférieure : 15px ;
-}
-
-.héros p {
-taille de police : 18 px ;
-largeur maximale : 650 px ;
-marge : automatique ;
-}
-
-.btn {
-affichage : bloc en ligne ;
-marge supérieure : 25px ;
-marge intérieure : 13px 25px ;
-arrière-plan : #C62828 ;
-couleur : blanc ;
-text-decoration: aucune;
-bordure-radius: 30px;
-police-weight: gras;
-}
-
-section {
-marge intérieure : 55px 20px ;
-largeur maximale : 1100px ;
-marge : automatique ;
-}
-
-section h2 {
-text-align: centre;
+h1{
+alignement du texte : centré ;
 couleur : #C62828 ;
-taille de police : 29 px ;
-marge inférieure : 30px ;
+marge inférieure : 10px ;
 }
 
-.à propos de {
-text-align: centre;
-largeur maximale : 800 px ;
-marge : automatique ;
+h2{
+alignement du texte : centré ;
+marge inférieure : 30 px ;
+couleur : #5E8C31 ;
 }
 
-.packs {
-affichage : grille ;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-écart : 22 px ;
+.offre{
+position : relative ;
+affichage : bloc ;
+arrière-plan : #fff;
+bordure:2px solide #ddd;
+bordure-radius:18px;
+marge intérieure : 20 px ;
+marge inférieure : 20 px ;
+curseur : pointeur ;
+transition:.3s;
 }
 
-.carte {
-fond : blanc ;
-marge intérieure : 25 px ;
-bordure-radius: 18px;
-text-align: centre;
-box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.offre:survol{
+couleur de bordure : #C62828 ;
+transformer:translateY(-2px);
 }
 
-.carte h3 {
-couleur : #6D4C41 ;
+.offre entrée{
+position:absolute;
+haut:25px;
+gauche : 20px ;
+largeur : 22 px ;
+hauteur : 22 px ;
+}
+
+.offre:a(entrée:cochée){
+bordure:3px solide #C62828;
+box-shadow:0 8px 20px rgba(198,40,40,.15);
+}
+
+.badge{
+position:absolute;
+haut:-15px;
+droite:20px;
+arrière-plan : #ff3b30 ;
+couleur : #fff;
+marge intérieure : 8px 18px ;
+bordure-radius:25px;
+police-weight:bold;
+taille de police : 15 px ;
+}
+
+.titre{
+taille de police : 28 px ;
+couleur : #C62828 ;
+police-weight:gras;
+marge inférieure : 10px ;
+}
+
+.sous-titre{
+affichage : bloc en ligne ;
+arrière-plan : #5E8C31 ;
+couleur : #fff;
+marge intérieure : 6px 14px ;
+bordure-radius:10px;
+marge inférieure : 15 px ;
+}
+
+.vieux{
+couleur : #999 ;
+text-decoration:ligne-barrée;
+taille de police : 18 px ;
+}
+
+.prix{
+couleur : #5E8C31 ;
+taille de police : 38 px ;
+police-weight:gras;
+marge supérieure : 5 px ;
+}
+
+.expédition{
+affichage : bloc en ligne ;
+marge supérieure : 12px ;
+arrière-plan : #efefef;
+couleur : #555 ;
+marge intérieure : 8px 14px ;
+bordure-radius:12px;
+taille de police : 15 px ;
+}
+
+bouton{
+largeur : 100 % ;
+arrière-plan : #C62828 ;
+couleur : #fff;
+bordure : aucune ;
+bordure-radius:15px;
+marge intérieure : 18 px ;
+taille de police : 22 px ;
+police-weight:gras;
+curseur : pointeur ;
+transition:.3s;
+}
+
+bouton:survol{
+arrière-plan : #a61f1f;
+}
+
+@media (max-width:768px){
+
+.titre{
 taille de police : 22 px ;
 }
 
-.prix {
-couleur : #C62828 ;
-taille de police : 24 px ;
-police-weight: gras;
-marge : 15px 0 ;
+.prix{
+taille de police : 30 px ;
 }
 
-.contact {
-text-align: centre;
-arrière-plan : #D9C3A3 ;
-bordure-radius: 20px;
-marge intérieure : 40px 20px ;
+bouton{
+taille de police : 18 px ;
 }
 
-pied de page {
-arrière-plan : #6D4C41 ;
-couleur : blanc ;
-text-align: centre;
-marge intérieure : 25 px ;
-}
-
-@media (max-width: 600px) {
-en-tête h1 {
-taille de police : 29 px ;
-}
-
-.hero h2 {
-taille de police : 27 px ;
-}
 }
