@@ -1,0 +1,133 @@
+* {
+box-sizing: border-box;
+marge : 0 ;
+marge intérieure : 0 ;
+}
+
+corps {
+police de caractères : Arial, sans-serif ;
+arrière-plan : #F8F6F2 ;
+couleur : #3b302c ;
+hauteur de ligne : 1,6 ;
+}
+
+en-tête {
+arrière-plan : #C62828 ;
+couleur : blanc ;
+text-align: centre;
+marge intérieure : 25px 15px ;
+}
+
+en-tête h1 {
+taille de police : 36 px ;
+}
+
+navigation {
+fond : blanc ;
+marge intérieure : 14 px ;
+text-align: centre;
+}
+
+navigation a {
+couleur : #6D4C41 ;
+text-decoration: aucune;
+marge : 0 10px ;
+police-weight: gras;
+}
+
+.héros {
+text-align: centre;
+marge intérieure : 70px 20px ;
+arrière-plan : #D9C3A3 ;
+}
+
+.hero h2 {
+taille de police : 34 px ;
+marge inférieure : 15px ;
+}
+
+.héros p {
+taille de police : 18 px ;
+largeur maximale : 650 px ;
+marge : automatique ;
+}
+
+.btn {
+affichage : bloc en ligne ;
+marge supérieure : 25px ;
+marge intérieure : 13px 25px ;
+arrière-plan : #C62828 ;
+couleur : blanc ;
+text-decoration: aucune;
+bordure-radius: 30px;
+police-weight: gras;
+}
+
+section {
+marge intérieure : 55px 20px ;
+largeur maximale : 1100px ;
+marge : automatique ;
+}
+
+section h2 {
+text-align: centre;
+couleur : #C62828 ;
+taille de police : 29 px ;
+marge inférieure : 30px ;
+}
+
+.à propos de {
+text-align: centre;
+largeur maximale : 800 px ;
+marge : automatique ;
+}
+
+.packs {
+affichage : grille ;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+écart : 22 px ;
+}
+
+.carte {
+fond : blanc ;
+marge intérieure : 25 px ;
+bordure-radius: 18px;
+text-align: centre;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.carte h3 {
+couleur : #6D4C41 ;
+taille de police : 22 px ;
+}
+
+.prix {
+couleur : #C62828 ;
+taille de police : 24 px ;
+police-weight: gras;
+marge : 15px 0 ;
+}
+
+.contact {
+text-align: centre;
+arrière-plan : #D9C3A3 ;
+bordure-radius: 20px;
+marge intérieure : 40px 20px ;
+}
+
+pied de page {
+arrière-plan : #6D4C41 ;
+couleur : blanc ;
+text-align: centre;
+marge intérieure : 25 px ;
+}
+
+@media (max-width: 600px) {
+en-tête h1 {
+taille de police : 29 px ;
+}
+
+.hero h2 {
+taille de police : 27 px ;
+}
+}
