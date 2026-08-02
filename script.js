@@ -1,20 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-const radios = document.querySelectorAll('input[name="pack"]');
-const bouton = document.getElementById("commander");
+const packs = document.querySelectorAll(".pack");
+const form = document.querySelector("form");
 
-const prix = {
-"essentiel": "Commandant • 1950 DA",
-"premium": "Commandant • 2550 DA",
-"chef": "Commandant • 2600 DA",
-"cuisine": "Commandant • 2800 DA"
-};
+packs.forEach(pack => {
+pack.addEventListener("click", function () {
 
-radios.forEach(radio => {
-radio.addEventListener("change", () => {
-bouton.textContent = prix[radio.value];
+packs.forEach(p => p.classList.remove("selected"));
+this.classList.add("sélectionné");
+
+const titre = this.querySelector("h3").innerText;
+
+let hidden = document.getElementById("selectedPack");
+
+si (!caché) {
+caché = document.createElement("input");
+caché.type = "caché";
+hidden.id = "selectedPack";
+hidden.name = "الباقة";
+formulaire.appendChild(caché);
+}
+
+caché.valeur = titre;
 });
 });
 
+form.addEventListener("submit", function (e) {
+e.prévenirDefault();
+alert("تم استلام طلبك بنجاح ✅");
 });
 
+});
