@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<titre>Délicea | L'art des épices</title>
+
+<style>
+* {
+box-sizing: border-box;
+marge : 0 ;
+marge intérieure : 0 ;
+}
+
+corps {
+police de caractères : Arial, sans-serif ;
+arrière-plan : #F8F6F2 ;
+couleur : #3b302c ;
+hauteur de ligne : 1,6 ;
+}
+
+en-tête {
+arrière-plan : #C62828 ;
+couleur : blanc ;
+text-align: centre;
+marge intérieure : 25 px 15 px ;
+}
+
+en-tête h1 {
+taille de police : 36 px ;
+marge inférieure : 5 px ;
+}
+
+en-tête p {
+taille de police : 17 px ;
+}
+
+navigation {
+fond : blanc ;
+marge intérieure : 14 px ;
+text-align: centre;
+position : collante ;
+haut : 0 ;
+z-index: 10;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+navigation a {
+couleur : #6D4C41 ;
+text-decoration: aucune;
+marge : 0 10px ;
+police-weight: gras;
+}
+
+.héros {
+text-align: centre;
+marge intérieure : 70px 20px ;
+arrière-plan : #D9C3A3 ;
+}
+
+.hero h2 {
+taille de police : 34 px ;
+marge inférieure : 15px ;
+}
+
+.héros p {
+taille de police : 18 px ;
+largeur maximale : 650 px ;
+marge : automatique ;
+}
+
+.btn {
+affichage : bloc en ligne ;
+marge supérieure : 25px ;
+marge intérieure : 13px 25px ;
+arrière-plan : #C62828 ;
+couleur : blanc ;
+text-decoration: aucune;
+bordure-radius: 30px;
+police-weight: gras;
+}
+
+section {
+marge intérieure : 55px 20px ;
+largeur maximale : 1100px ;
+marge : automatique ;
+}
+
+section h2 {
+text-align: centre;
+couleur : #C62828 ;
+taille de police : 29 px ;
+marge inférieure : 30px ;
+}
+
+.à propos de {
+text-align: centre;
+largeur maximale : 800 px ;
+marge : automatique ;
+}
+
+.packs {
+affichage : grille ;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+écart : 22 px ;
+}
+
+.carte {
+fond : blanc ;
+marge intérieure : 25 px ;
+bordure-radius: 18px;
+text-align: centre;
+box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.carte h3 {
+couleur : #6D4C41 ;
+taille de police : 22 px ;
+marge inférieure : 10px ;
+}
+
+.prix {
+couleur : #C62828 ;
+taille de police : 24 px ;
+police-weight: gras;
+marge : 15px 0 ;
+}
+
+.contact {
+text-align: centre;
+arrière-plan : #D9C3A3 ;
+bordure-radius: 20px;
+marge intérieure : 40px 20px ;
+}
+
+pied de page {
+arrière-plan : #6D4C41 ;
+couleur : blanc ;
+text-align: centre;
+marge intérieure : 25 px ;
+}
+
+@media (max-width: 600px) {
+en-tête h1 {
+taille de police : 29 px ;
+}
+
+.hero h2 {
+taille de police : 27 px ;
+}
+
+navigation a {
+marge : 0 5px ;
+taille de police : 14px ;
+}
+}
+</style>
+</head>
+
+<corps>
+
+<header>
+<h1>🌶️ Délicea</h1>
+<p>L'art des épices</p>
+</header>
+
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#packs">Nos packs</a>
+<a href="#apropos">À propos</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<div class="hero" id="accueil">
+<h2>Donnez plus de saveur à vos recettes</h2>
+<p>
+Découvrez les épices, mélanges et herbes Délicea,
+sélectionnés avec soin pour accompagner votre cuisine.
+</p>
+
+<a class="btn" href="#packs">Découvrir nos packs</a>
+</div>
+
+<section id="à propos">
+Qui sommes-nous ?
+
+<div class="about">
+<p>
+Depuis plus de 30 ans, Délicea poursuit son aventure
+en proposant des épices et mélanges de qualité,
+portée par une longue expérience et une véritable
+passion pour la saveur.
+</p>
+
+<br>
+
+<p>
+Chez Délicea, nous ne proposons pas simplement des épices :
+nous accompagnons votre passion pour la cuisine et ajoutons
+une touche exceptionnelle à chaque recette.
+</p>
+</div>
+</section>
+
+<section id="packs">
+<h2>Nos packs</h2>
+
+<div class="packs">
+
+<div class="card">
+<h3>باقة الكوزينة</h3>
+<p>Le pack cuisine Délicea</p>
+<p class="price">2450 DA</p>
+<p>Au lieu de 2550 DA</p>
+<a class="btn" href="#contact">Commandant</a>
+</div>
+
+<div class="card">
+<h3>باقة التقليدية</h3>
+<p>Découvrez notre sélection traditionnelle.</p>
+<a class="btn" href="#contact">Commandant</a>
+</div>
+
+<div class="card">
+<h3>Nos épices</h3>
+<p>
+Épices, mélanges et herbes pour donner
+encore plus de goût à vos plats.
+</p>
+<a class="btn" href="#contact">Commandant</a>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+<h2>Commandant chez Délicea</h2>
+
+<p>
+Pour commander ou demander plus d'informations,
+contactez-nous directement.
+</p>
+
+<!-- REMPLACER LE NUMÉRO PAR TON NUMÉRO WHATSAPP -->
+<a
+classe="btn"
+href=" https://wa.me/213XXXXXXXXX "
+cible="_blank">
+Commander sur WhatsApp
+</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Délicea — L'art des épices</p>
+</footer>
+
+</body>
+</html>
