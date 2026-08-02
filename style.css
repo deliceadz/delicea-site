@@ -1,138 +1,214 @@
+/* ===========================
+Délicea - Style CSS
+=========================== */
+
 *{
-marge:0;
-marge intérieure : 0 ;
+margin:0;
+padding:0;
 box-sizing:border-box;
 }
 
-corps{
-police-family:'Cairo',sans-serif;
-arrière-plan : #F8F6F2 ;
-marge intérieure : 20 px ;
-couleur : #2F2F2F;
+body{
+font-family:Arial, sans-serif;
+background:#F8F6F2;
+color:#2F2F2F;
+line-height:1.6;
 }
 
-h1{
-alignement du texte : centré ;
-couleur : #C62828 ;
-marge inférieure : 10px ;
+header{
+background:#C62828;
+color:#fff;
+text-align:center;
+padding:25px;
 }
 
-h2{
-alignement du texte : centré ;
-marge inférieure : 30 px ;
-couleur : #5E8C31 ;
+header h1{
+font-size:38px;
+margin-bottom:10px;
 }
 
-.offre{
-position : relative ;
-affichage : bloc ;
-arrière-plan : #fff;
-bordure:2px solide #ddd;
-bordure-radius:18px;
-marge intérieure : 20 px ;
-marge inférieure : 20 px ;
-curseur : pointeur ;
+header p{
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:auto;
+}
+
+.hero{
+text-align:center;
+padding:40px 20px;
+}
+
+.hero .img{
+width:100%;
+height:300px;
+border:3px dashed #ccc;
+border-radius:20px;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#777;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+background:#C62828;
+color:#fff;
+text-decoration:none;
+padding:15px 35px;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
 transition:.3s;
 }
 
-.offre:survol{
-couleur de bordure : #C62828 ;
-transformer:translateY(-2px);
+.btn:hover{
+background:#A71D1D;
 }
 
-.offre entrée{
-position:absolute;
-haut:25px;
-gauche : 20px ;
-largeur : 22 px ;
-hauteur : 22 px ;
+h2{
+text-align:center;
+margin:40px 0 25px;
+color:#C62828;
 }
 
-.offre:a(entrée:cochée){
-bordure:3px solide #C62828;
-box-shadow:0 8px 20px rgba(198,40,40,.15);
+.pack{
+background:#fff;
+border:2px solid #ddd;
+border-radius:18px;
+padding:20px;
+margin-bottom:25px;
+position:relative;
+cursor:pointer;
+transition:.3s;
+}
+
+.pack:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.pack.selected{
+border:3px solid #C62828;
+box-shadow:0 0 15px rgba(198,40,40,.25);
+}
+
+.best{
+border-color:#C62828;
 }
 
 .badge{
 position:absolute;
-haut:-15px;
-droite:20px;
-arrière-plan : #ff3b30 ;
-couleur : #fff;
-marge intérieure : 8px 18px ;
-bordure-radius:25px;
-police-weight:bold;
-taille de police : 15 px ;
+top:-14px;
+right:20px;
+background:#C62828;
+color:#fff;
+padding:8px 18px;
+border-radius:30px;
+font-weight:bold;
 }
 
-.titre{
-taille de police : 28 px ;
-couleur : #C62828 ;
-police-weight:gras;
-marge inférieure : 10px ;
+.pack h3{
+margin-bottom:15px;
+color:#C62828;
 }
 
-.sous-titre{
-affichage : bloc en ligne ;
-arrière-plan : #5E8C31 ;
-couleur : #fff;
-marge intérieure : 6px 14px ;
-bordure-radius:10px;
-marge inférieure : 15 px ;
+.pack .img{
+width:100%;
+height:220px;
+border:2px dashed #ccc;
+border-radius:15px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#fafafa;
+color:#777;
+margin-bottom:15px;
 }
 
-.vieux{
-couleur : #999 ;
-text-decoration:ligne-barrée;
-taille de police : 18 px ;
+.old{
+color:#999;
+text-decoration:line-through;
+font-size:18px;
 }
 
-.prix{
-couleur : #5E8C31 ;
-taille de police : 38 px ;
-police-weight:gras;
-marge supérieure : 5 px ;
+.price{
+color:#5E8C31;
+font-size:30px;
+font-weight:bold;
 }
 
-.expédition{
-affichage : bloc en ligne ;
-marge supérieure : 12px ;
-arrière-plan : #efefef;
-couleur : #555 ;
-marge intérieure : 8px 14px ;
-bordure-radius:12px;
-taille de police : 15 px ;
+form{
+background:#fff;
+padding:25px;
+border-radius:18px;
+margin:40px 0;
 }
 
-bouton{
-largeur : 100 % ;
-arrière-plan : #C62828 ;
-couleur : #fff;
-bordure : aucune ;
-bordure-radius:15px;
-marge intérieure : 18 px ;
-taille de police : 22 px ;
-police-weight:gras;
-curseur : pointeur ;
-transition:.3s;
+input,
+select,
+textarea{
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
 }
 
-bouton:survol{
-arrière-plan : #a61f1f;
+textarea{
+resize:none;
+height:120px;
 }
 
-@media (max-width:768px){
-
-.titre{
-taille de police : 22 px ;
+button{
+width:100%;
+padding:16px;
+background:#C62828;
+color:#fff;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
 }
 
-.prix{
-taille de police : 30 px ;
+button:hover{
+background:#A71D1D;
 }
 
-bouton{
-taille de police : 18 px ;
+footer{
+text-align:center;
+padding:30px;
+color:#666;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:28px;
+}
+
+.hero .img{
+height:220px;
+}
+
+.pack .img{
+height:180px;
+}
+
+.price{
+font-size:24px;
+}
+
+.btn,
+button{
+font-size:16px;
 }
 
 }
