@@ -1,236 +1,152 @@
-//======================================
-// DELICEA
-// packs.js
-//======================================
-
 const packs = [
 
 {
-    id:1,
-
-    nom:"Pack Essentiel",
-
-    nomAr:"الباقة الأساسية",
-
-    prix:1950,
-
-    ancienPrix:2200,
-
-    remise:11,
-
-    image:"images/packs/pack1.png",
-
-    nombre:8,
-
-    poids:"120 g",
-
-    poidsTotal:"960 g",
-
-    composition:[
-
-        "Curcuma moulu",
-        "Cumin moulu",
-        "Coriandre moulue",
-        "Cannelle moulue",
-        "Paprika",
-        "Poivre noir",
-        "Gingembre moulu",
-        "Ail moulu"
-
-    ],
-
-    compositionAr:[
-
-        "كركم مرحي",
-        "كمون مرحي",
-        "قصبر مرحي",
-        "قرفة مرحية",
-        "فلفل أحمر حلو",
-        "فلفل أسود مرحي",
-        "زنجبيل مرحي",
-        "ثوم مرحي"
-
-    ]
-
+id:"kitchen",
+name:"باقة الكوزينة",
+price:2800,
+image:"pack1.jpg",
+weight:"وزن كل علبة 120غ",
+details:[
+"قرفة مرحية",
+"ثوم مرحي",
+"قصبر مرحي",
+"كمون مرحي",
+"بسباس حب",
+"أعشاب عطرية",
+"بابريكا مدخن",
+"فلفل أحمر حار مرحي",
+"زعفران مرحي",
+"رأس الحانوت",
+"توابل الدجاج",
+"توابل الكاري"
+]
 },
 
+
+
 {
-    id:2,
-
-    nom:"Pack Chef",
-
-    nomAr:"باقة الشيف",
-
-    prix:2600,
-
-    ancienPrix:2900,
-
-    remise:10,
-
-    image:"images/packs/pack2.png",
-
-    nombre:10,
-
-    poids:"120 g",
-
-    poidsTotal:"1200 g",
-
-    composition:[
-
-        "Curcuma",
-        "Cumin",
-        "Poivre noir",
-        "Paprika",
-        "Cannelle",
-        "Coriandre",
-        "Ail",
-        "Gingembre",
-        "Herbes de Provence",
-        "Ras El Hanout"
-
-    ],
-
-    compositionAr:[
-
-        "كركم",
-        "كمون",
-        "فلفل أسود",
-        "فلفل أحمر",
-        "قرفة",
-        "قصبر",
-        "ثوم",
-        "زنجبيل",
-        "أعشاب عطرية",
-        "رأس الحانوت"
-
-    ]
-
+id:"mamira",
+name:"باقة المميرة",
+price:2550,
+image:"pack2.jpg",
+weight:"وزن كل علبة 120غ",
+details:[
+"فلفل عكري مرحي",
+"فلفل حار مرحي",
+"رأس الحانوت",
+"فلفل أسود مرحي",
+"قرفة مرحية",
+"أعشاب عطرية",
+"قرنفل حب",
+"زعفران مرحي",
+"بابريكا مدخن",
+"زعيترة"
+]
 },
 
+
+
+
 {
-    id:3,
-
-    nom:"Pack Premium",
-
-    nomAr:"الباقة الممتازة",
-
-    prix:2550,
-
-    ancienPrix:2850,
-
-    remise:10,
-
-    image:"images/packs/pack3.png",
-
-    nombre:10,
-
-    poids:"120 g",
-
-    poidsTotal:"1200 g",
-
-    composition:[
-
-        "Curry",
-        "Paprika",
-        "Curcuma",
-        "Poivre noir",
-        "Coriandre",
-        "Cumin",
-        "Cannelle",
-        "Ail",
-        "Gingembre",
-        "Piment doux"
-
-    ],
-
-    compositionAr:[
-
-        "كاري",
-        "فلفل أحمر",
-        "كركم",
-        "فلفل أسود",
-        "قصبر",
-        "كمون",
-        "قرفة",
-        "ثوم",
-        "زنجبيل",
-        "فلفل حلو"
-
-    ]
-
+id:"chef",
+name:"باقة الشيف",
+price:2600,
+image:"pack3.jpg",
+weight:"وزن كل علبة 120غ",
+details:[
+"فلفل أسود مرحي",
+"إكليل الجبل",
+"فلفل عكري مرحي",
+"فلفل أحمر حار مرحي",
+"معدنوس مجفف",
+"بابريكا مدخن",
+"أعشاب عطرية",
+"سكنجبير مرحي",
+"قصبر مرحي",
+"ثوم مرحي"
+]
 },
 
+
+
+
 {
-    id:4,
-
-    nom:"Pack Cuisine",
-
-    nomAr:"باقة المطبخ",
-
-    prix:2800,
-
-    ancienPrix:3200,
-
-    remise:12,
-
-    image:"images/packs/pack4.png",
-
-    nombre:12,
-
-    poids:"120 g",
-
-    poidsTotal:"1440 g",
-
-    composition:[
-
-        "Curcuma",
-        "Cumin",
-        "Paprika",
-        "Poivre noir",
-        "Cannelle",
-        "Coriandre",
-        "Ail",
-        "Gingembre",
-        "Ras El Hanout",
-        "Herbes de Provence",
-        "Origan",
-        "Basilic"
-
-    ],
-
-    compositionAr:[
-
-        "كركم",
-        "كمون",
-        "فلفل أحمر",
-        "فلفل أسود",
-        "قرفة",
-        "قصبر",
-        "ثوم",
-        "زنجبيل",
-        "رأس الحانوت",
-        "أعشاب عطرية",
-        "زعتر",
-        "حبق"
-
-    ]
+id:"basic",
+name:"الباقة الأساسية",
+price:1950,
+image:"pack4.jpg",
+weight:"وزن كل علبة 120غ",
+details:[
+"كركم مرحي",
+"كمون مرحي",
+"فلفل أسود مرحي",
+"كروية مرحية",
+"قصبر مرحي",
+"فلفل عكري مرحي",
+"فلفل حار مرحي",
+"رأس الحانوت"
+]
 
 }
 
 ];
 
-//===============================
-// Recherche d'un pack
-//===============================
 
-function getPack(id){
 
-    return packs.find(pack => pack.id == id);
 
-}
 
-//===============================
-// Affichage console
-//===============================
+const container = document.getElementById("packs-container");
 
-console.log("Packs chargés :", packs);
+
+packs.forEach(pack => {
+
+
+container.innerHTML += `
+
+<div class="pack-card">
+
+
+<img src="${pack.image}" alt="${pack.name}">
+
+
+<h3>${pack.name}</h3>
+
+
+<p>${pack.weight}</p>
+
+
+<h4>${pack.price} دج</h4>
+
+
+
+<button onclick="orderPack('${pack.name}',${pack.price})">
+اطلب الآن
+</button>
+
+
+
+<button onclick="showDetails('${pack.id}')">
+عرض التفاصيل
+</button>
+
+
+
+<div id="${pack.id}" class="details">
+
+<h4>مكونات الباقة:</h4>
+
+<ul>
+
+${pack.details.map(item=>`<li>${item}</li>`).join("")}
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+`;
+
+});
