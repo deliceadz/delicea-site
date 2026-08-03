@@ -1,203 +1,178 @@
-// ==========================
-// DELICEA APP
-// Commande WhatsApp + Total
-// ==========================
+//======================================
+// DELICEA
+// app.js
+//======================================
 
+// Menu Mobile
 
-// FERMER FENETRE DETAILS PACK
+const menuBtn = document.getElementById("menu-btn");
+const nav = document.querySelector("nav");
 
-const closeBtn = document.querySelector(".close");
+if (menuBtn) {
 
-closeBtn.onclick = function(){
+    menuBtn.addEventListener("click", () => {
 
-    document.getElementById("pack-modal").style.display="none";
-
-}
-
-
-
-
-window.onclick = function(event){
-
-    let modal =
-    document.getElementById("pack-modal");
-
-
-    if(event.target == modal){
-
-        modal.style.display="none";
-
-    }
-
-}
-
-
-
-
-// BOUTON COMMANDE DEPUIS LA FENETRE
-
-document.getElementById("modal-order").onclick=function(){
-
-    document.getElementById("pack-modal").style.display="none";
-
-    document
-    .getElementById("commande")
-    .scrollIntoView({
-
-        behavior:"smooth"
+        nav.classList.toggle("show");
 
     });
 
-};
+}
 
+//======================================
+// Header au scroll
+//======================================
 
+const header = document.querySelector(".header");
 
+window.addEventListener("scroll", () => {
 
+    if (window.scrollY > 80) {
 
+        header.style.background = "#ffffff";
+        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.08)";
 
+    } else {
 
-// CALCUL TOTAL
+        header.style.background = "#ffffff";
+        header.style.boxShadow = "none";
 
-
-let quantity =
-document.getElementById("quantity");
-
-
-let total =
-document.getElementById("total");
-
-
-
-const prixPack = 1950;
-
-
-
-quantity.addEventListener("change",function(){
-
-
-let nombre =
-parseInt(this.value);
-
-
-
-total.innerHTML =
-prixPack * nombre;
-
+    }
 
 });
 
+//======================================
+// Bouton Retour en haut
+//======================================
 
+const topButton = document.createElement("button");
 
-// valeur initiale
+topButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
 
-total.innerHTML = prixPack;
+topButton.className = "top-button";
 
+document.body.appendChild(topButton);
 
+window.addEventListener("scroll", () => {
 
+    if (window.scrollY > 400) {
 
+        topButton.classList.add("active");
 
+    } else {
 
+        topButton.classList.remove("active");
 
-// ENVOI WHATSAPP
-
-
-document
-.getElementById("order-form")
-.addEventListener("submit",function(e){
-
-
-e.preventDefault();
-
-
-
-
-let nom =
-document.getElementById("nom").value;
-
-
-let prenom =
-document.getElementById("prenom").value;
-
-
-let telephone =
-document.getElementById("telephone").value;
-
-
-let wilaya =
-document.getElementById("wilaya").value;
-
-
-let commune =
-document.getElementById("commune").value;
-
-
-let adresse =
-document.getElementById("adresse").value;
-
-
-let livraison =
-document.getElementById("livraison").value;
-
-
-let packs =
-document.getElementById("quantity").value;
-
-
-let montant =
-document.getElementById("total").innerText;
-
-
-
-
-
-let message =
-
-`🌿 *Commande Delicea*
-
-👤 Nom : ${nom}
-👤 Prénom : ${prenom}
-
-📱 Téléphone : ${telephone}
-
-🏙️ Wilaya : ${wilaya}
-
-🏘️ Commune : ${commune}
-
-🏠 Adresse :
-${adresse}
-
-🚚 Livraison :
-${livraison}
-
-📦 Nombre de packs :
-${packs}
-
-💰 Total :
-${montant} DA
-
-Merci`;
-
-
-
-
-
-let numero =
-"213770715514";
-
-
-
-let url =
-
-"https://wa.me/"
-+numero
-+"?text="
-+encodeURIComponent(message);
-
-
-
-
-window.open(url,"_blank");
-
-
+    }
 
 });
+
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+//======================================
+// Animation des cartes
+//======================================
+
+const cards = document.querySelectorAll(
+    ".pack-card,.advantage-card,.testimonial-card,.contact-card,.item"
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+cards.forEach(card => observer.observe(card));
+
+//======================================
+// Animation des boutons
+//======================================
+
+const buttons = document.querySelectorAll(
+    ".btn-pack,.btn-primary,.btn-secondary"
+);
+
+buttons.forEach(button => {
+
+    button.addEventListener("mouseenter", () => {
+
+        button.style.transform = "scale(1.05)";
+
+    });
+
+    button.addEventListener("mouseleave", () => {
+
+        button.style.transform = "scale(1)";
+
+    });
+
+});
+
+//======================================
+// Effet sur les images des packs
+//======================================
+
+const images = document.querySelectorAll(".pack-card img");
+
+images.forEach(img => {
+
+    img.addEventListener("mouseenter", () => {
+
+        img.style.transform = "scale(1.08) rotate(2deg)";
+
+    });
+
+    img.addEventListener("mouseleave", () => {
+
+        img.style.transform = "scale(1) rotate(0deg)";
+
+    });
+
+});
+
+//======================================
+// Année automatique du footer
+//======================================
+
+const footer = document.querySelector(".footer p");
+
+if (footer) {
+
+    footer.innerHTML =
+        "© " + new Date().getFullYear() + " DELICEA - Tous droits réservés.";
+
+}
+
+//======================================
+// Préchargement des images
+//======================================
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
+
+console.log("DELICEA - Site chargé avec succès");
