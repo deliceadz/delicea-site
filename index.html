@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,94 +8,211 @@
 <title>Delicea - Commande Packs</title>
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+
 <header>
-    <img src="logo.png" alt="Delicea">
-    <h1>Commandez vos Packs Delicea</h1>
-    <p>Livraison disponible en Algérie</p>
+
+<img src="logo.png" alt="Delicea">
+
+<h1>Commandez vos Packs Delicea</h1>
+
+<p>🚚 Livraison disponible en Algérie</p>
+
 </header>
+
 
 
 <section class="packs">
 
-    <div class="pack">
-        <h2>Pack Cuisine</h2>
-        <p>Saveurs essentielles pour votre cuisine</p>
-        <h3>2800 DA</h3>
-        <button onclick="choisirPack('Pack Cuisine - 2800 DA')">
-            Commander
-        </button>
-    </div>
+
+<div class="pack">
+<h2>Pack Cuisine</h2>
+<p>Les essentiels pour votre cuisine</p>
+<h3>2800 DA</h3>
+
+<button onclick="choisirPack('Pack Cuisine - 2800 DA')">
+Commander
+</button>
+
+</div>
 
 
-    <div class="pack">
-        <h2>Pack Chef</h2>
-        <p>Pour les passionnés de cuisine</p>
-        <h3>2600 DA</h3>
-        <button onclick="choisirPack('Pack Chef - 2600 DA')">
-            Commander
-        </button>
-    </div>
+
+<div class="pack">
+<h2>Pack Chef</h2>
+<p>Pour les passionnés de cuisine</p>
+<h3>2600 DA</h3>
+
+<button onclick="choisirPack('Pack Chef - 2600 DA')">
+Commander
+</button>
+
+</div>
 
 
-    <div class="pack">
-        <h2>Pack Essentiel</h2>
-        <p>Les épices indispensables</p>
-        <h3>1950 DA</h3>
-        <button onclick="choisirPack('Pack Essentiel - 1950 DA')">
-            Commander
-        </button>
-    </div>
+
+<div class="pack">
+<h2>Pack Essentiel</h2>
+<p>Les épices indispensables</p>
+<h3>1950 DA</h3>
+
+<button onclick="choisirPack('Pack Essentiel - 1950 DA')">
+Commander
+</button>
+
+</div>
 
 
-    <div class="pack">
-        <h2>Pack Spécial</h2>
-        <p>Une sélection de saveurs Delicea</p>
-        <h3>2550 DA</h3>
-        <button onclick="choisirPack('Pack Spécial - 2550 DA')">
-            Commander
-        </button>
-    </div>
+
+<div class="pack">
+<h2>Pack Spécial</h2>
+<p>Une sélection Delicea</p>
+<h3>2550 DA</h3>
+
+<button onclick="choisirPack('Pack Spécial - 2550 DA')">
+Commander
+</button>
+
+</div>
+
 
 </section>
 
 
+
+
+
 <section class="commande">
+
 
 <h2>Votre commande</h2>
 
-<input type="text" id="pack" placeholder="Pack choisi" readonly>
 
-<input type="text" id="nom" placeholder="Votre nom">
+<input id="pack" 
+placeholder="Pack choisi" 
+readonly>
 
-<input type="tel" id="tel" placeholder="Téléphone">
 
-<select id="wilaya">
-<option>Choisir Wilaya</option>
+
+<input id="nom" 
+placeholder="Nom et prénom">
+
+
+
+<input id="tel" 
+placeholder="Téléphone">
+
+
+
+
+
+<h3>🚚 Livraison</h3>
+
+
+
+<select id="wilaya" onchange="calculerLivraison()">
+
+<option value="">
+Choisir Wilaya
+</option>
+
+<option>Alger</option>
+<option>Blida</option>
+<option>Tipaza</option>
+<option>Boumerdès</option>
+<option>Tizi Ouzou</option>
+<option>Béjaïa</option>
+<option>Sétif</option>
+<option>Oran</option>
+<option>Constantine</option>
+<option>Annaba</option>
+
 </select>
 
-<input type="text" id="commune" placeholder="Commune">
-
-<input type="text" id="adresse" placeholder="Adresse">
 
 
-<button class="envoyer" onclick="envoyerCommande()">
-Envoyer la commande
+
+<select id="typeLivraison" onchange="calculerLivraison()">
+
+<option value="">
+Type livraison
+</option>
+
+<option value="domicile">
+Livraison à domicile
+</option>
+
+<option value="bureau">
+Livraison bureau
+</option>
+
+
+</select>
+
+
+
+
+
+<p id="infoLivraison">
+Tarif livraison : -
+</p>
+
+
+
+
+
+<select id="commune">
+
+<option>
+Choisir Commune
+</option>
+
+</select>
+
+
+
+
+<input id="adresse"
+placeholder="Adresse de livraison">
+
+
+
+
+
+<button class="envoyer"
+onclick="envoyerCommande()">
+
+Envoyer la commande WhatsApp
+
 </button>
 
 
 </section>
 
 
+
+
 <footer>
-<p>© Delicea - Saveurs authentiques</p>
+
+<p>
+© Delicea - Saveurs authentiques
+</p>
+
 </footer>
 
 
+
+
+
+<script src="delivery.js"></script>
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>
