@@ -1,27 +1,18 @@
-// ==========================
-// DELICEA PACKS
-// ==========================
-
 
 const packs = [
 
 
 {
     id:1,
-
     nom:"الباقة الأساسية",
-
     prix:1950,
-
     image:"images/packs/base.jpg",
-
     nombre:"8 أنواع من التوابل",
 
     description:
     "باقة أساسية تجمع أهم التوابل اليومية للمطبخ الجزائري",
 
     composition:[
-
         "كركم مرحي",
         "كمون مرحي",
         "كروية مرحية",
@@ -30,7 +21,6 @@ const packs = [
         "قرفة مرحية",
         "بابريكا",
         "أعشاب عطرية"
-
     ]
 
 },
@@ -39,100 +29,73 @@ const packs = [
 
 {
     id:2,
-
     nom:"باقة الذوق",
-
     prix:2950,
-
     image:"images/packs/saveur.jpg",
-
     nombre:"12 نوع من التوابل",
 
     description:
-    "مجموعة متنوعة لتحضير وصفات لذيذة كل يوم",
+    "مجموعة متنوعة لتحضير وصفات لذيذة",
 
     composition:[
-
         "كركم",
         "كمون",
         "قصبر",
         "فلفل أسود",
         "قرفة",
         "زنجبيل",
-        "بابريكا",
         "رأس الحانوت",
-        "أعشاب بروفانس",
-        "نعناع",
-        "رند",
-        "بسباس"
-
+        "أعشاب بروفانس"
     ]
 
 },
 
 
 
-
 {
     id:3,
-
     nom:"الباقة الممتازة",
-
     prix:3950,
-
     image:"images/packs/premium.jpg",
-
     nombre:"18 نوع من التوابل",
 
     description:
     "باقة كاملة لمحبي النكهات الأصيلة",
 
     composition:[
-
-        "توابل اللحم",
         "توابل الدجاج",
+        "توابل اللحم",
         "توابل السمك",
         "كاري",
-        "رأس الحانوت",
         "شاورما",
+        "رأس الحانوت",
         "كسكس",
-        "شربة",
-        "طاجين زيتون"
-
+        "شربة"
     ]
 
 },
 
 
 
-
-
 {
     id:4,
-
     nom:"باقة العائلة",
-
     prix:4950,
-
     image:"images/packs/maison.jpg",
-
     nombre:"مجموعة المطبخ الكامل",
 
     description:
-    "كل ما تحتاجه العائلة الجزائرية في باقة واحدة",
+    "كل ما تحتاجه العائلة في باقة واحدة",
 
     composition:[
-
         "توابل يومية",
         "أعشاب عطرية",
         "خلطات خاصة",
         "توابل المشويات",
         "توابل الأطباق التقليدية"
-
     ]
 
 }
-
 
 
 ];
@@ -141,7 +104,6 @@ const packs = [
 
 
 
-// عرض الباقات
 
 const container =
 document.getElementById("packs-container");
@@ -186,7 +148,7 @@ ${pack.nombre}
 <br><br>
 
 
-<button onclick="goCommande()">
+<button onclick="choisirPack(${pack.id});goCommande();">
 
 🛒 اطلب الآن
 
@@ -198,14 +160,15 @@ ${pack.nombre}
 
 `;
 
-
 });
 
 
 
 
 
-// فتح التفاصيل
+
+
+
 
 function showPack(id){
 
@@ -232,18 +195,21 @@ pack.description;
 
 
 
-let list =
+let liste =
 document.getElementById("modal-composition");
 
 
-list.innerHTML="";
+liste.innerHTML="";
+
 
 
 pack.composition.forEach(item=>{
 
 
-list.innerHTML +=
-`<li>${item}</li>`;
+liste.innerHTML +=
+`
+<li>${item}</li>
+`;
 
 
 });
@@ -259,7 +225,10 @@ document.getElementById("pack-modal").style.display="block";
 
 
 
-// Aller au formulaire
+
+
+
+
 
 function goCommande(){
 
