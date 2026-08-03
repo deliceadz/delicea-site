@@ -41,7 +41,6 @@ Commander
 </div>
 
 
-
 <div class="pack">
 <h2>Pack Chef</h2>
 <p>Pour les passionnés de cuisine</p>
@@ -54,7 +53,6 @@ Commander
 </div>
 
 
-
 <div class="pack">
 <h2>Pack Essentiel</h2>
 <p>Les épices indispensables</p>
@@ -65,7 +63,6 @@ Commander
 </button>
 
 </div>
-
 
 
 <div class="pack">
@@ -92,46 +89,38 @@ Commander
 <h2>Votre commande</h2>
 
 
-<input id="pack" 
-placeholder="Pack choisi" 
-readonly>
+<input id="pack" placeholder="Pack choisi" readonly>
 
 
-
-<input id="nom" 
-placeholder="Nom et prénom">
+<input id="nom" placeholder="Nom et prénom">
 
 
-
-<input id="tel" 
-placeholder="Téléphone">
-
-
-
+<input id="tel" placeholder="Téléphone">
 
 
 <h3>🚚 Livraison</h3>
 
 
 
-<select id="wilaya" onchange="calculerLivraison()">
+<select id="wilaya" onchange="chargerCommunes(); calculerLivraison();">
 
 <option value="">
 Choisir Wilaya
 </option>
 
-<option>Alger</option>
-<option>Blida</option>
-<option>Tipaza</option>
-<option>Boumerdès</option>
-<option>Tizi Ouzou</option>
-<option>Béjaïa</option>
-<option>Sétif</option>
-<option>Oran</option>
-<option>Constantine</option>
-<option>Annaba</option>
+</select>
+
+
+
+
+<select id="commune">
+
+<option value="">
+Choisir Commune
+</option>
 
 </select>
+
 
 
 
@@ -150,7 +139,6 @@ Livraison à domicile
 Livraison bureau
 </option>
 
-
 </select>
 
 
@@ -165,17 +153,6 @@ Tarif livraison : -
 
 
 
-<select id="commune">
-
-<option>
-Choisir Commune
-</option>
-
-</select>
-
-
-
-
 <input id="adresse"
 placeholder="Adresse de livraison">
 
@@ -183,8 +160,7 @@ placeholder="Adresse de livraison">
 
 
 
-<button class="envoyer"
-onclick="envoyerCommande()">
+<button class="envoyer" onclick="envoyerCommande()">
 
 Envoyer la commande WhatsApp
 
@@ -192,6 +168,7 @@ Envoyer la commande WhatsApp
 
 
 </section>
+
 
 
 
@@ -207,6 +184,10 @@ Envoyer la commande WhatsApp
 
 
 
+
+<script src="wilayas.js"></script>
+
+<script src="communes.js"></script>
 
 <script src="delivery.js"></script>
 
