@@ -1,78 +1,187 @@
 let packChoisi = "";
+let prixPack = 0;
 let tarifLivraison = 0;
 
 
-function choisirPack(pack){
+
+// اختيار الباك
+
+function choisirPack(pack, prix){
 
     packChoisi = pack;
+    prixPack = prix;
 
-    document.getElementById("pack").value = pack;
+    document.getElementById("pack").value = pack + " - " + prix + " DA";
+
 
     window.scrollTo({
         top: document.querySelector(".commande").offsetTop,
         behavior: "smooth"
     });
 
+
+    afficherTotal();
+
 }
 
 
+
+// عرض تفاصيل الباك
+
+function voirDetails(){
+
+    document.getElementById("detailsPack").style.display="block";
+
+}
+
+
+
+// إغلاق التفاصيل
+
+function fermerDetails(){
+
+    document.getElementById("detailsPack").style.display="none";
+
+}
+
+
+
+// حساب التوصيل
 
 function calculerLivraison(){
 
-    let wilaya = document.getElementById("wilaya").value;
-    let type = document.getElementById("typeLivraison").value;
+let wilaya = document.getElementById("wilaya").value;
 
-    let info = document.getElementById("infoLivraison");
-
-
-    if(livraisons[wilaya]){
-
-        if(type === "domicile"){
-            tarifLivraison = livraisons[wilaya].domicile;
-        }
-
-        else if(type === "bureau"){
-            tarifLivraison = livraisons[wilaya].bureau;
-        }
-
-        else{
-            tarifLivraison = 0;
-        }
+let type = document.getElementById("typeLivraison").value;
 
 
-        info.innerHTML =
-        "🚚 Délai : " + livraisons[wilaya].delai +
-        "<br>Tarif livraison : " + tarifLivraison + " DA";
+let info = document.getElementById("infoLivraison");
 
 
-    }else{
 
-        info.innerHTML="Choisir une wilaya";
+if(livraisons[wilaya]){
+
+
+    if(type=="domicile"){
+
+        tarifLivraison = livraisons[wilaya].domicile;
 
     }
+
+
+    else if(type=="bureau"){
+
+        tarifLivraison = livraisons[wilaya].bureau;
+
+    }
+
+
+    else{
+
+        tarifLivraison = 0;
+
+    }
+
+
+
+    info.innerHTML =
+
+    "🚚 Délai : "
+    + livraisons[wilaya].delai
+    +"<br>💰 Livraison : "
+    + tarifLivraison
+    +" DA";
+
+
+
+}
+
+else{
+
+tarifLivraison = 0;
+
+info.innerHTML="Choisir Wilaya";
 
 }
 
 
 
+afficherTotal();
+
+
+}
+
+
+
+// affichage total
+
+function afficherTotal(){
+
+let total = prixPack + tarifLivraison;
+
+
+let zone = document.getElementById("totalCommande");
+
+
+if(zone){
+
+zone.innerHTML =
+"💰 Total à payer : "
++ total
++" DA";
+
+}
+
+}
+
+
+
+
+// إرسال الطلب واتساب
 
 function envoyerCommande(){
 
 
-let nom = document.getElementById("nom").value;
-let tel = document.getElementById("tel").value;
-let wilaya = document.getElementById("wilaya").value;
-let type = document.getElementById("typeLivraison").value;
-let commune = document.getElementById("commune").value;
-let adresse = document.getElementById("adresse").value;
+let nom =
+document.getElementById("nom").value;
+
+
+let tel =
+document.getElementById("tel").value;
+
+
+let wilaya =
+document.getElementById("wilaya").value;
+
+
+let commune =
+document.getElementById("commune").value;
+
+
+let type =
+document.getElementById("typeLivraison").value;
+
+
+let adresse =
+document.getElementById("adresse").value;
+
+
+
+let total = prixPack + tarifLivraison;
 
 
 
 let message =
 
-"Nouvelle commande Delicea%0A%0A"+
+"🌶️ DELICEA - Nouvelle commande%0A%0A"+
 
 "📦 Pack : "+packChoisi+"%0A"+
+
+"💰 Prix : "+prixPack+" DA%0A"+
+
+"🚚 Livraison : "+tarifLivraison+" DA%0A"+
+
+"💵 Total : "+total+" DA%0A%0A"+
 
 "👤 Nom : "+nom+"%0A"+
 
@@ -80,13 +189,11 @@ let message =
 
 "📍 Wilaya : "+wilaya+"%0A"+
 
-"🚚 Livraison : "+type+"%0A"+
+"🏘️ Commune : "+commune+"%0A"+
 
-"💰 Tarif livraison : "+tarifLivraison+" DA%0A"+
+"🚚 Type : "+type+"%0A"+
 
-"🏠 Commune : "+commune+"%0A"+
-
-"Adresse : "+adresse;
+"🏠 Adresse : "+adresse;
 
 
 
@@ -101,6 +208,7 @@ window.open(
 "_blank"
 
 );
+
 
 
 }
