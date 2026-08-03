@@ -1,95 +1,276 @@
+// ==========================
+// DELICEA PACKS
+// ==========================
+
+
 const packs = [
+
 
 {
     id:1,
+
     nom:"الباقة الأساسية",
+
     prix:1950,
+
     image:"images/packs/base.jpg",
-    nombre:8,
-    poids:"120 غ",
-    poidsTotal:"960 غ",
+
+    nombre:"8 أنواع من التوابل",
+
+    description:
+    "باقة أساسية تجمع أهم التوابل اليومية للمطبخ الجزائري",
 
     composition:[
+
         "كركم مرحي",
         "كمون مرحي",
         "كروية مرحية",
         "قصبر مرحي",
-        "فلفل عكري مرحي",
         "فلفل أسود مرحي",
-        "فلفل حار مرحي",
-        "رأس الحانوت"
+        "قرفة مرحية",
+        "بابريكا",
+        "أعشاب عطرية"
+
     ]
+
 },
+
+
 
 {
     id:2,
-    nom:"باقة الشيف",
-    prix:2600,
-    image:"images/packs/chef.jpg",
-    nombre:10,
-    poids:"120 غ",
-    poidsTotal:"1.200 كغ",
+
+    nom:"باقة الذوق",
+
+    prix:2950,
+
+    image:"images/packs/saveur.jpg",
+
+    nombre:"12 نوع من التوابل",
+
+    description:
+    "مجموعة متنوعة لتحضير وصفات لذيذة كل يوم",
 
     composition:[
-        "فلفل أسود مرحي",
-        "إكليل الجبل",
-        "فلفل عكري مرحي",
-        "فلفل أحمر حار مرحي",
-        "معدنوس مجفف",
-        "بابريكا مدخنة",
-        "أعشاب عطرية",
-        "سكنجبير مرحي",
-        "قصبر مرحي",
-        "ثوم مرحي"
+
+        "كركم",
+        "كمون",
+        "قصبر",
+        "فلفل أسود",
+        "قرفة",
+        "زنجبيل",
+        "بابريكا",
+        "رأس الحانوت",
+        "أعشاب بروفانس",
+        "نعناع",
+        "رند",
+        "بسباس"
+
     ]
+
 },
+
+
+
 
 {
     id:3,
-    nom:"الباقة المميزة",
-    prix:2550,
+
+    nom:"الباقة الممتازة",
+
+    prix:3950,
+
     image:"images/packs/premium.jpg",
-    nombre:10,
-    poids:"120 غ",
-    poidsTotal:"1.200 كغ",
+
+    nombre:"18 نوع من التوابل",
+
+    description:
+    "باقة كاملة لمحبي النكهات الأصيلة",
 
     composition:[
-        "فلفل عكري مرحي",
-        "فلفل حار مرحي",
+
+        "توابل اللحم",
+        "توابل الدجاج",
+        "توابل السمك",
+        "كاري",
         "رأس الحانوت",
-        "فلفل أسود مرحي",
-        "قرفة مرحية",
-        "أعشاب عطرية",
-        "قرنفل حب",
-        "زعفران مرحي",
-        "بابريكا مدخنة",
-        "زعيتـرة"
+        "شاورما",
+        "كسكس",
+        "شربة",
+        "طاجين زيتون"
+
     ]
+
 },
+
+
+
+
 
 {
     id:4,
-    nom:"باقة الكوزينة",
-    prix:2800,
-    image:"images/packs/cuisine.jpg",
-    nombre:12,
-    poids:"120 غ",
-    poidsTotal:"1.440 كغ",
+
+    nom:"باقة العائلة",
+
+    prix:4950,
+
+    image:"images/packs/maison.jpg",
+
+    nombre:"مجموعة المطبخ الكامل",
+
+    description:
+    "كل ما تحتاجه العائلة الجزائرية في باقة واحدة",
 
     composition:[
-        "قرفة مرحية",
-        "ثوم مرحي",
-        "قصبر مرحي",
-        "كمون مرحي",
-        "بسباس حب",
+
+        "توابل يومية",
         "أعشاب عطرية",
-        "بابريكا مدخنة",
-        "فلفل أحمر حار مرحي",
-        "زعفران مرحي",
-        "رأس الحانوت",
-        "توابل الدجاج",
-        "توابل الكاري"
+        "خلطات خاصة",
+        "توابل المشويات",
+        "توابل الأطباق التقليدية"
+
     ]
+
 }
 
+
+
 ];
+
+
+
+
+
+// عرض الباقات
+
+const container =
+document.getElementById("packs-container");
+
+
+
+packs.forEach(pack=>{
+
+
+container.innerHTML += `
+
+
+<div class="pack-card">
+
+
+<img src="${pack.image}">
+
+
+<h3>
+${pack.nom}
+</h3>
+
+
+<h4>
+${pack.prix} دج
+</h4>
+
+
+<p>
+${pack.nombre}
+</p>
+
+
+
+<button onclick="showPack(${pack.id})">
+
+👁️ عرض المزيد
+
+</button>
+
+
+<br><br>
+
+
+<button onclick="goCommande()">
+
+🛒 اطلب الآن
+
+</button>
+
+
+</div>
+
+
+`;
+
+
+});
+
+
+
+
+
+// فتح التفاصيل
+
+function showPack(id){
+
+
+let pack =
+packs.find(p=>p.id===id);
+
+
+
+document.getElementById("modal-image").src =
+pack.image;
+
+
+document.getElementById("modal-name").innerHTML =
+pack.nom;
+
+
+document.getElementById("modal-price").innerHTML =
+pack.prix+" دج";
+
+
+document.getElementById("modal-description").innerHTML =
+pack.description;
+
+
+
+let list =
+document.getElementById("modal-composition");
+
+
+list.innerHTML="";
+
+
+pack.composition.forEach(item=>{
+
+
+list.innerHTML +=
+`<li>${item}</li>`;
+
+
+});
+
+
+
+document.getElementById("pack-modal").style.display="block";
+
+
+}
+
+
+
+
+
+// Aller au formulaire
+
+function goCommande(){
+
+
+document
+.getElementById("commande")
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+
+}
