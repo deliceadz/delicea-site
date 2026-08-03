@@ -17,8 +17,6 @@
 <body>
 
 
-<!-- LOGO -->
-
 <header>
 
 <div class="logo">
@@ -32,8 +30,6 @@
 
 
 
-
-<!-- BANNIERE -->
 
 <section class="banner">
 
@@ -58,7 +54,6 @@
 
 
 
-<!-- PACKS -->
 
 <section class="packs">
 
@@ -80,69 +75,36 @@
 
 
 
-<!-- POURQUOI DELICEA -->
-
 
 <section class="why">
-
 
 <h2>
 لماذا تختار دليسيا؟
 </h2>
 
 
-
 <div class="why-box">
 
 
 <div>
-
 🌿
-
-<h3>
-جودة عالية
-</h3>
-
-<p>
-منتجات مختارة بعناية
-</p>
-
+<h3>جودة عالية</h3>
+<p>منتجات مختارة بعناية</p>
 </div>
 
 
-
-
 <div>
-
 🏭
-
-<h3>
-صناعة جزائرية
-</h3>
-
-<p>
-تحضير وتغليف احترافي
-</p>
-
+<h3>صناعة جزائرية</h3>
+<p>تحضير وتغليف احترافي</p>
 </div>
-
-
 
 
 <div>
-
 🚚
-
-<h3>
-توصيل سريع
-</h3>
-
-<p>
-إلى جميع الولايات
-</p>
-
+<h3>توصيل سريع</h3>
+<p>كل الولايات</p>
 </div>
-
 
 
 </div>
@@ -157,8 +119,7 @@
 
 
 
-
-<!-- DETAIL PACK -->
+<!-- DETAILS PACK -->
 
 <div id="pack-modal" class="modal">
 
@@ -176,30 +137,17 @@
 
 <h2 id="modal-name"></h2>
 
-
 <h3 id="modal-price"></h3>
-
 
 <p id="modal-description"></p>
 
 
-<h4>
-المكونات
-</h4>
-
-
-<ul id="modal-composition">
-
-</ul>
-
+<ul id="modal-composition"></ul>
 
 
 <button id="modal-order">
-
 🛒 اطلب الآن
-
 </button>
-
 
 
 </div>
@@ -235,7 +183,7 @@
 الاسم
 </label>
 
-<input id="nom" type="text" required>
+<input id="nom" required>
 
 
 
@@ -244,8 +192,7 @@
 اللقب
 </label>
 
-<input id="prenom" type="text" required>
-
+<input id="prenom" required>
 
 
 
@@ -254,7 +201,8 @@
 رقم الهاتف
 </label>
 
-<input id="telephone" type="tel" required>
+<input id="telephone" required>
+
 
 
 
@@ -268,10 +216,11 @@
 <select id="wilaya">
 
 <option>
-اختر الولاية
+اختيار الولاية
 </option>
 
 </select>
+
 
 
 
@@ -286,7 +235,7 @@
 <select id="commune">
 
 <option>
-اختر البلدية
+اختيار البلدية
 </option>
 
 </select>
@@ -310,6 +259,7 @@
 
 
 
+
 <label>
 نوع التوصيل
 </label>
@@ -323,8 +273,8 @@
 </option>
 
 
-<option value="point">
-نقطة استلام
+<option value="bureau">
+مكتب
 </option>
 
 
@@ -336,10 +286,11 @@
 
 
 
+
+
 <label>
 عدد الباقات
 </label>
-
 
 
 <select id="quantity">
@@ -367,15 +318,25 @@
 
 
 
+
+<p>
+🚚 التوصيل :
+<span id="livraison-prix">
+0 DA
+</span>
+</p>
+
+
+
+
+
 <h3>
 
-💰 Total :
+💰 المجموع :
 
 <span id="total">
-1950
+0 DA
 </span>
-
-دج
 
 </h3>
 
@@ -392,7 +353,6 @@
 </button>
 
 
-
 </form>
 
 
@@ -405,9 +365,6 @@
 
 
 
-<!-- AVIS -->
-
-
 <section class="reviews">
 
 
@@ -418,15 +375,7 @@
 
 <div class="review-box">
 
-<p>
 جودة رائعة وطعم مميز
-</p>
-
-
-<strong>
-زبون Delicea
-</strong>
-
 
 </div>
 
@@ -438,43 +387,6 @@
 
 
 
-
-<!-- PHOTOS CLIENTS -->
-
-
-<section class="customers">
-
-
-<h2>
-📸 صور زبائننا
-</h2>
-
-
-
-<div id="customer-images">
-
-
-<img src="images/client1.jpg">
-
-
-<img src="images/client2.jpg">
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- FOOTER -->
 
 
 <footer>
@@ -500,11 +412,6 @@ Delicea
 </p>
 
 
-<p>
-© Delicea 2026
-</p>
-
-
 </footer>
 
 
@@ -514,8 +421,8 @@ Delicea
 
 
 
-<!-- JAVASCRIPT -->
 
+<!-- JAVASCRIPT -->
 
 <script src="js/wilayas.js"></script>
 
