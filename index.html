@@ -1,78 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Delicea - Commande Packs</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" alt="Delicea">
+
+<h1>Commandez vos Packs Delicea</h1>
+
+<p>🚚 Livraison disponible en Algérie</p>
+
+</header>
+
+<section class="packs">
+
 <div class="pack">
 
-<h2>🍲 باك المطبخ</h2>
+<h2>Pack Cuisine</h2>
 
-<p>Pack Cuisine</p>
+<p>Les essentiels pour votre cuisine</p>
 
 <h3>2800 DA</h3>
 
-<p>
-📦 12 علبة × 120غ
-<br>
-⚖️ الوزن الإجمالي: 1.440 كغ
-</p>
-
-
-<button onclick="voirDetails()">
-عرض المزيد
-</button>
-
-
 <button onclick="choisirPack('Pack Cuisine - 2800 DA')">
-🛒 اطلب الآن
-</button>
 
+Commander
+
+</button>
 
 </div>
 
+<div class="pack">
 
+<h2>Pack Chef</h2>
 
-<!-- نافذة التفاصيل -->
+<p>Pour les passionnés de cuisine</p>
 
-<div id="detailsPack" class="details">
+<h3>2600 DA</h3>
 
-<h2>🍲 باك المطبخ</h2>
+<button onclick="choisirPack('Pack Chef - 2600 DA')">
 
-<p>
-مجموعة متكاملة من التوابل الأساسية لعشاق الطبخ
-</p>
+Commander
 
-
-<ul>
-
-<li>قرفة مرحية</li>
-<li>ثوم مرحي</li>
-<li>قصبر مرحي</li>
-<li>كمون مرحي</li>
-<li>بسباس حب</li>
-<li>بابريكا مدخنة مرحية</li>
-<li>فلفل حار مرحي</li>
-<li>زعفران مرحي</li>
-<li>توابل الدجاج</li>
-<li>كاري مرحي</li>
-<li>أعشاب عطرية</li>
-<li>رأس الحانوت مرحي</li>
-
-</ul>
-
-
-<p>
-📦 12 علبة × 120غ
-</p>
-
-<h3>
-2800 DA
-</h3>
-
-
-<button onclick="choisirPack('Pack Cuisine - 2800 DA')">
-🛒 اطلب الآن
 </button>
-
-
-<button onclick="fermerDetails()">
-إغلاق
-</button>
-
 
 </div>
+
+<div class="pack">
+
+<h2>Pack Essentiel</h2>
+
+<p>Les épices indispensables</p>
+
+<h3>1950 DA</h3>
+
+<button onclick="choisirPack('Pack Essentiel - 1950 DA')">
+
+Commander
+
+</button>
+
+</div>
+
+<div class="pack">
+
+<h2>Pack Spécial</h2>
+
+<p>Une sélection Delicea</p>
+
+<h3>2550 DA</h3>
+
+<button onclick="choisirPack('Pack Spécial - 2550 DA')">
+
+Commander
+
+</button>
+
+</div>
+
+</section>
+
+<section class="commande">
+
+<h2>Votre commande</h2>
+
+<input id="pack" placeholder="Pack choisi" readonly>
+
+<input id="nom" placeholder="Nom et prénom">
+
+<input id="tel" placeholder="Téléphone">
+
+<h3>🚚 Livraison</h3>
+
+<select id="wilaya" onchange="chargerCommunes(); calculerLivraison();">
+
+<option value="">
+
+Choisir Wilaya
+
+</option>
+
+</select>
+
+<select id="commune">
+
+<option value="">
+
+Choisir Commune
+
+</option>
+
+</select>
+
+<select id="typeLivraison" onchange="calculerLivraison()">
+
+<option value="">
+
+Type livraison
+
+</option>
+
+<option value="domicile">
+
+Livraison à domicile
+
+</option>
+
+<option value="bureau">
+
+Livraison bureau
+
+</option>
+
+</select>
+
+<p id="infoLivraison">
+
+Tarif livraison : -
+
+</p>
+
+<input id="adresse"
+
+placeholder="Adresse de livraison">
+
+<button class="envoyer" onclick="envoyerCommande()">
+
+Envoyer la commande WhatsApp
+
+</button>
+
+</section>
+
+<footer>
+
+<p>
+
+© Delicea - Saveurs authentiques
+
+</p>
+
+</footer>
+
+<script src="wilayas.js"></script>
+
+<script src="communes.js"></script>
+
+<script src="delivery.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+--
+Cordialement / Best regards / خالص التحيات
+
+ Mr. OUGAOUA BOUALEM 
+
+EURL AL YANSOUNE
+
+FABRICATIONS DE PRODUITS ALIMENTAIRES
+
+Tel : + 213 771 147 688 - + 213 554 335 552
+
+
+
