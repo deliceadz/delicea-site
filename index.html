@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Delicea | Épices & Plantes Aromatiques</title>
+    <title>DELICEA | Épices & Plantes Aromatiques</title>
 
-    <meta name="description" content="Delicea - Fabrication et conditionnement d'épices, herbes aromatiques et mélanges d'épices en Algérie.">
+    <meta name="description"
+        content="Delicea - Fabrication et conditionnement d'épices, plantes aromatiques et produits alimentaires en Algérie.">
 
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
 
-<header>
+<header class="header">
 
     <div class="container">
 
         <a href="index.html" class="logo">
+
             <img src="images/logo.png" alt="Delicea">
+
         </a>
 
         <nav>
@@ -36,7 +45,7 @@
 
                 <li><a href="index.html">Accueil</a></li>
 
-                <li><a href="packs.html">Nos Packs</a></li>
+                <li><a href="#packs">Nos Packs</a></li>
 
                 <li><a href="#about">À propos</a></li>
 
@@ -46,6 +55,22 @@
 
         </nav>
 
+        <div class="header-icons">
+
+            <a href="https://wa.me/213770715514">
+
+                <i class="fab fa-whatsapp"></i>
+
+            </a>
+
+            <button id="menu-btn">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
     </div>
 
 </header>
@@ -54,126 +79,271 @@
 
 <section class="hero">
 
-    <div class="overlay"></div>
+    <div class="container hero-content">
 
-    <div class="hero-content">
+        <div class="hero-text">
 
-        <h1>
-            DELICEA
-        </h1>
+            <span class="badge">
 
-        <h2>
-            Épices & Plantes Aromatiques
-        </h2>
+                🇩🇿 Fabrication Algérienne
 
-        <p>
+            </span>
 
-            Découvrez nos mélanges d'épices sélectionnés
-            pour donner des saveurs authentiques à votre cuisine.
+            <h1>
 
-        </p>
+                Les saveurs authentiques<br>
 
-        <a href="packs.html" class="btn">
+                de votre cuisine.
 
-            Découvrir nos Packs
-
-        </a>
-
-    </div>
-
-</section>
-
-<!-- ================= AVANTAGES ================= -->
-
-<section class="advantages">
-
-    <div class="container">
-
-        <div class="box">
-
-            <i class="fa-solid fa-seedling"></i>
-
-            <h3>Qualité Premium</h3>
+            </h1>
 
             <p>
 
-                Épices soigneusement sélectionnées.
+                Découvrez les packs Delicea composés d'épices et de plantes
+                aromatiques soigneusement sélectionnées pour sublimer tous vos
+                plats.
 
             </p>
+
+            <div class="hero-buttons">
+
+                <a href="#packs" class="btn-primary">
+
+                    Découvrir les packs
+
+                </a>
+
+                <a href="https://wa.me/213770715514" class="btn-secondary">
+
+                    Commander sur WhatsApp
+
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="box">
+        <div class="hero-image">
 
-            <i class="fa-solid fa-truck-fast"></i>
-
-            <h3>Livraison</h3>
-
-            <p>
-
-                Livraison dans toute l'Algérie.
-
-            </p>
-
-        </div>
-
-        <div class="box">
-
-            <i class="fa-solid fa-box-open"></i>
-
-            <h3>Conditionnement</h3>
-
-            <p>
-
-                Emballage propre et sécurisé.
-
-            </p>
-
-        </div>
-
-        <div class="box">
-
-            <i class="fa-solid fa-star"></i>
-
-            <h3>Saveurs</h3>
-
-            <p>
-
-                Des recettes riches en goût.
-
-            </p>
+            <img src="images/banner.png" alt="Delicea Packs">
 
         </div>
 
     </div>
 
 </section>
+<!-- ================= NOS PACKS ================= -->
 
-<!-- ================= PACKS ================= -->
-
-<section class="home-packs">
+<section class="packs" id="packs">
 
     <div class="container">
 
-        <h2>
+        <div class="section-title">
 
-            Nos Packs
+            <span>Nos Packs</span>
 
-        </h2>
+            <h2>Choisissez le pack qui vous convient</h2>
 
-        <div id="packsAccueil" class="cards">
-
-            <!-- Les packs seront ajoutés automatiquement -->
+            <p>
+                Des mélanges d'épices soigneusement sélectionnés pour donner
+                plus de saveur à votre cuisine.
+            </p>
 
         </div>
 
-        <div class="center">
+        <div class="packs-grid">
 
-            <a href="packs.html" class="btn">
+            <!-- Pack 1 -->
 
-                Voir tous les packs
+            <div class="pack-card">
 
-            </a>
+                <span class="promo">-11%</span>
+
+                <img src="images/packs/pack1.png" alt="Pack Essentiel">
+
+                <h3>Pack Essentiel</h3>
+
+                <p>8 épices indispensables</p>
+
+                <div class="price">
+
+                    <span class="old-price">2200 DA</span>
+
+                    <span class="new-price">1950 DA</span>
+
+                </div>
+
+                <a href="produit.html?id=1" class="btn-pack">
+
+                    Commander
+
+                </a>
+
+            </div>
+
+            <!-- Pack 2 -->
+
+            <div class="pack-card best">
+
+                <span class="best-badge">
+
+                    ⭐ Meilleure Vente
+
+                </span>
+
+                <img src="images/packs/pack2.png" alt="Pack Chef">
+
+                <h3>Pack Chef</h3>
+
+                <p>10 épices sélectionnées</p>
+
+                <div class="price">
+
+                    <span class="old-price">2900 DA</span>
+
+                    <span class="new-price">2600 DA</span>
+
+                </div>
+
+                <a href="produit.html?id=2" class="btn-pack">
+
+                    Commander
+
+                </a>
+
+            </div>
+
+            <!-- Pack 3 -->
+
+            <div class="pack-card">
+
+                <span class="promo">-10%</span>
+
+                <img src="images/packs/pack3.png" alt="Pack Premium">
+
+                <h3>Pack Premium</h3>
+
+                <p>10 épices Premium</p>
+
+                <div class="price">
+
+                    <span class="old-price">2850 DA</span>
+
+                    <span class="new-price">2550 DA</span>
+
+                </div>
+
+                <a href="produit.html?id=3" class="btn-pack">
+
+                    Commander
+
+                </a>
+
+            </div>
+
+            <!-- Pack 4 -->
+
+            <div class="pack-card">
+
+                <span class="promo">-12%</span>
+
+                <img src="images/packs/pack4.png" alt="Pack Cuisine">
+
+                <h3>Pack Cuisine</h3>
+
+                <p>12 épices variées</p>
+
+                <div class="price">
+
+                    <span class="old-price">3200 DA</span>
+
+                    <span class="new-price">2800 DA</span>
+
+                </div>
+
+                <a href="produit.html?id=4" class="btn-pack">
+
+                    Commander
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= POURQUOI CHOISIR DELICEA ================= -->
+
+<section class="advantages" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Pourquoi Delicea ?</span>
+
+            <h2>La qualité avant tout</h2>
+
+            <p>
+                Des épices soigneusement sélectionnées pour apporter des saveurs
+                authentiques à votre cuisine.
+            </p>
+
+        </div>
+
+        <div class="advantages-grid">
+
+            <div class="advantage-card">
+
+                <i class="fas fa-pepper-hot"></i>
+
+                <h3>Épices de qualité</h3>
+
+                <p>
+                    Des ingrédients sélectionnés avec soin pour préserver leur
+                    fraîcheur et leur goût.
+                </p>
+
+            </div>
+
+            <div class="advantage-card">
+
+                <i class="fas fa-box-open"></i>
+
+                <h3>Conditionnement soigné</h3>
+
+                <p>
+                    Emballage moderne garantissant une excellente conservation.
+                </p>
+
+            </div>
+
+            <div class="advantage-card">
+
+                <i class="fas fa-truck"></i>
+
+                <h3>Livraison nationale</h3>
+
+                <p>
+                    Livraison disponible dans toutes les wilayas d'Algérie.
+                </p>
+
+            </div>
+
+            <div class="advantage-card">
+
+                <i class="fab fa-whatsapp"></i>
+
+                <h3>Commande rapide</h3>
+
+                <p>
+                    Passez votre commande facilement via notre formulaire ou
+                    directement sur WhatsApp.
+                </p>
+
+            </div>
 
         </div>
 
@@ -181,25 +351,181 @@
 
 </section>
 
-<!-- ================= A PROPOS ================= -->
+<!-- ================= NOS ENGAGEMENTS ================= -->
 
-<section id="about" class="about">
+<section class="engagements">
 
     <div class="container">
 
-        <h2>
+        <div class="engagement-box">
 
-            À propos de Delicea
+            <div class="item">
 
-        </h2>
+                <i class="fas fa-check-circle"></i>
 
-        <p>
+                <h3>100 % Qualité</h3>
 
-            Delicea est spécialisée dans la fabrication,
-            le conditionnement et la distribution d'épices,
-            plantes aromatiques et mélanges de qualité.
+                <p>
+                    Des produits sélectionnés avec soin.
+                </p>
 
-        </p>
+            </div>
+
+            <div class="item">
+
+                <i class="fas fa-leaf"></i>
+
+                <h3>Saveurs Authentiques</h3>
+
+                <p>
+                    Des mélanges adaptés à la cuisine algérienne.
+                </p>
+
+            </div>
+
+            <div class="item">
+
+                <i class="fas fa-headset"></i>
+
+                <h3>Service Client</h3>
+
+                <p>
+                    Nous répondons rapidement à toutes vos questions.
+                </p>
+
+            </div>
+
+            <div class="item">
+
+                <i class="fas fa-shield-alt"></i>
+
+                <h3>Confiance</h3>
+
+                <p>
+                    Une marque engagée pour la satisfaction de ses clients.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= AVIS CLIENTS ================= -->
+
+<section class="testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Ils nous font confiance</span>
+
+            <h2>Avis de nos clients</h2>
+
+            <p>
+                Découvrez ce que pensent nos clients des produits Delicea.
+            </p>
+
+        </div>
+
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    "Des épices de très bonne qualité. Les saveurs sont
+                    authentiques et les emballages sont magnifiques."
+                </p>
+
+                <h4>Karima B.</h4>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    "Commande reçue rapidement. Les mélanges sont excellents
+                    pour la cuisine quotidienne."
+                </p>
+
+                <h4>Samir A.</h4>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    "Très satisfait de mon pack Delicea. Je recommande
+                    sans hésiter."
+                </p>
+
+                <h4>Nadia M.</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Questions fréquentes</span>
+
+            <h2>FAQ</h2>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Dans quelles wilayas livrez-vous ?</h3>
+
+            <p>
+                Nous livrons dans toutes les wilayas d'Algérie.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Comment commander ?</h3>
+
+            <p>
+                Choisissez votre pack, remplissez le formulaire et confirmez votre commande.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Quels sont les moyens de paiement ?</h3>
+
+            <p>
+                Paiement à la livraison selon les conditions disponibles.
+            </p>
+
+        </div>
 
     </div>
 
@@ -207,39 +533,51 @@
 
 <!-- ================= CONTACT ================= -->
 
-<section id="contact" class="contact">
+<section class="contact" id="contact">
 
     <div class="container">
 
-        <h2>
+        <div class="section-title">
 
-            Contact
+            <span>Contact</span>
 
-        </h2>
+            <h2>Besoin d'informations ?</h2>
 
-        <p>
+        </div>
 
-            📞 Téléphone
+        <div class="contact-grid">
 
-        </p>
+            <div class="contact-card">
 
-        <p>
+                <i class="fab fa-whatsapp"></i>
 
-            💬 WhatsApp
+                <h3>WhatsApp</h3>
 
-        </p>
+                <p>0770 71 55 14</p>
 
-        <p>
+            </div>
 
-            📧 Email
+            <div class="contact-card">
 
-        </p>
+                <i class="fab fa-instagram"></i>
 
-        <p>
+                <h3>Instagram</h3>
 
-            📍 Algérie
+                <p>@epicesdelicea</p>
 
-        </p>
+            </div>
+
+            <div class="contact-card">
+
+                <i class="fab fa-tiktok"></i>
+
+                <h3>TikTok</h3>
+
+                <p>@epicesdelicea</p>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -247,19 +585,39 @@
 
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer class="footer">
 
-    <p>
+    <div class="container">
 
-        © 2026 DELICEA
+        <img src="images/logo.png" alt="Delicea Logo" class="footer-logo">
 
-    </p>
+        <p>
+            © 2026 DELICEA - Tous droits réservés.
+        </p>
+
+        <div class="socials">
+
+            <a href="https://wa.me/213770715514">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+        </div>
+
+    </div>
 
 </footer>
-
-<!-- Scripts -->
-
-<script src="js/packs.js"></script>
 
 <script src="js/app.js"></script>
 
