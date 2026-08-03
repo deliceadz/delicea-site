@@ -1,205 +1,164 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Delicea | بوابة النكهة</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="دليسيا - توابل وأعشاب عطرية طبيعية مع التوصيل إلى جميع ولايات الجزائر">
 
-<title>Delicea - Commande Packs</title>
+    <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<header>
+    <!-- ===========================
+         HEADER
+    ============================ -->
 
-<img src="logo.png" alt="Delicea">
+    <header class="header">
 
-<h1>Commandez vos Packs Delicea</h1>
+        <div class="logo">
 
-<p>🚚 Livraison disponible en Algérie</p>
+            <img src="images/logo.png" alt="Delicea Logo">
 
-</header>
+        </div>
 
-<section class="packs">
+        <div class="header-text">
 
-<div class="pack">
+            <h1>دليسيا</h1>
 
-<h2>Pack Cuisine</h2>
+            <p>بوابة النكهة</p>
 
-<p>Les essentiels pour votre cuisine</p>
+        </div>
 
-<h3>2800 DA</h3>
+    </header>
 
-<button onclick="choisirPack('Pack Cuisine - 2800 DA')">
+    <!-- ===========================
+        HERO
+    ============================ -->
 
-Commander
+    <section class="hero">
 
-</button>
+        <img src="images/banner.jpg" alt="Delicea">
 
-</div>
+    </section>
 
-<div class="pack">
+    <!-- ===========================
+        TITLE
+    ============================ -->
 
-<h2>Pack Chef</h2>
+    <section class="title">
 
-<p>Pour les passionnés de cuisine</p>
+        <h2>اختر باقتك المفضلة</h2>
 
-<h3>2600 DA</h3>
+        <p>
+            اكتشف أفضل باقات التوابل المختارة بعناية لإضفاء نكهة مميزة على أطباقك.
+        </p>
 
-<button onclick="choisirPack('Pack Chef - 2600 DA')">
+    </section>
 
-Commander
+    <!-- ===========================
+        PACKS
+    ============================ -->
 
-</button>
+    <section class="packs">
 
-</div>
+        <!-- Les 4 cartes seront ajoutées ici -->
 
-<div class="pack">
+    </section>
 
-<h2>Pack Essentiel</h2>
+    <!-- ===========================
+        WHY DELICEA
+    ============================ -->
 
-<p>Les épices indispensables</p>
+    <section class="features">
 
-<h3>1950 DA</h3>
+        <h2>لماذا تختار دليسيا؟</h2>
 
-<button onclick="choisirPack('Pack Essentiel - 1950 DA')">
+        <div class="feature">
+            🌿 مكونات طبيعية
+        </div>
 
-Commander
+        <div class="feature">
+            🚚 التوصيل إلى جميع ولايات الجزائر
+        </div>
 
-</button>
+        <div class="feature">
+            💵 الدفع عند الاستلام
+        </div>
 
-</div>
+        <div class="feature">
+            ⭐ جودة عالية
+        </div>
 
-<div class="pack">
+    </section>
 
-<h2>Pack Spécial</h2>
+    <!-- ===========================
+        CUSTOMER REVIEWS
+    ============================ -->
 
-<p>Une sélection Delicea</p>
+    <section class="reviews">
 
-<h3>2550 DA</h3>
+        <h2>آراء زبائننا</h2>
 
-<button onclick="choisirPack('Pack Spécial - 2550 DA')">
+        <!-- Avis clients -->
 
-Commander
+    </section>
 
-</button>
+    <!-- ===========================
+        CUSTOMER PHOTOS
+    ============================ -->
 
-</div>
+    <section class="gallery">
 
-</section>
+        <h2>صور زبائننا</h2>
 
-<section class="commande">
+        <!-- Photos -->
 
-<h2>Votre commande</h2>
+    </section>
 
-<input id="pack" placeholder="Pack choisi" readonly>
+    <!-- ===========================
+        FOOTER
+    ============================ -->
 
-<input id="nom" placeholder="Nom et prénom">
+    <footer>
 
-<input id="tel" placeholder="Téléphone">
+        <h3>Delicea</h3>
 
-<h3>🚚 Livraison</h3>
+        <p>📍 الجزائر</p>
 
-<select id="wilaya" onchange="chargerCommunes(); calculerLivraison();">
+        <p>🚚 التوصيل إلى جميع الولايات</p>
 
-<option value="">
+        <p>💵 الدفع عند الاستلام</p>
 
-Choisir Wilaya
+    </footer>
 
-</option>
+    <!-- JS -->
 
-</select>
+    <script src="js/packs.js"></script>
 
-<select id="commune">
+    <script src="js/wilayas.js"></script>
 
-<option value="">
+    <script src="js/communes.js"></script>
 
-Choisir Commune
+    <script src="js/livraison.js"></script>
 
-</option>
+    <script src="js/whatsapp.js"></script>
 
-</select>
-
-<select id="typeLivraison" onchange="calculerLivraison()">
-
-<option value="">
-
-Type livraison
-
-</option>
-
-<option value="domicile">
-
-Livraison à domicile
-
-</option>
-
-<option value="bureau">
-
-Livraison bureau
-
-</option>
-
-</select>
-
-<p id="infoLivraison">
-
-Tarif livraison : -
-
-</p>
-
-<input id="adresse"
-
-placeholder="Adresse de livraison">
-
-<button class="envoyer" onclick="envoyerCommande()">
-
-Envoyer la commande WhatsApp
-
-</button>
-
-</section>
-
-<footer>
-
-<p>
-
-© Delicea - Saveurs authentiques
-
-</p>
-
-</footer>
-
-<script src="wilayas.js"></script>
-
-<script src="communes.js"></script>
-
-<script src="delivery.js"></script>
-
-<script src="script.js"></script>
+    <script src="js/app.js"></script>
 
 </body>
 
 </html>
-
-
-
-
---
-Cordialement / Best regards / خالص التحيات
-
- Mr. OUGAOUA BOUALEM 
-
-EURL AL YANSOUNE
-
-FABRICATIONS DE PRODUITS ALIMENTAIRES
-
-Tel : + 213 771 147 688 - + 213 554 335 552
-
-
-
