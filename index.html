@@ -2,305 +2,136 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Délicea | الباب إلى النكهة</title>
 
-<title>Délicea | الباب إلى النكهة</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- Header -->
 
-<header class="hero">
+    <header>
 
-<div class="hero-content">
+        <div class="logo">
 
-<h1>Délicea 🌶️</h1>
+            <img src="images/logo.png" alt="Délicea Logo">
 
-<h2>الباب إلى النكهة</h2>
+        </div>
 
-<p>
-توابل طبيعية 100٪ بدون إضافات
-</p>
+        <nav>
 
+            <a href="#">الرئيسية</a>
 
-<a href="#packs" class="btn">
-اكتشف الباقات
-</a>
+            <a href="#packs">الباقات</a>
 
+            <a href="#reviews">آراء الزبائن</a>
 
-</div>
+            <a href="#contact">اتصل بنا</a>
 
-</header>
+        </nav>
 
+    </header>
 
 
 
+    <!-- Hero -->
 
-<section class="about">
+    <section class="hero">
 
-<h2>
-من نحن؟
-</h2>
+        <div class="hero-text">
 
+            <h1>الباب إلى النكهة</h1>
 
-<p>
-Délicea تقدم لكم توابل مختارة بعناية
-لإضافة نكهة أصلية ومميزة لأطباقكم.
-</p>
+            <p>توابل طبيعية 100٪ بدون إضافات</p>
 
+            <a href="#packs" class="btn">
+                اكتشف الباقات
+            </a>
 
-</section>
+        </div>
 
+        <div class="hero-image">
 
+            <img src="images/hero.jpg" alt="Délicea">
 
+        </div>
 
+    </section>
 
-<section class="why">
 
-<h2>
-لماذا Délicea؟
-</h2>
 
+    <!-- Packs -->
 
-<div>
+    <section id="packs">
 
-<p>🌿 طبيعية 100٪</p>
+        <h2>باقاتنا</h2>
 
-<p>🌶️ جودة ونكهة أصلية</p>
+        <div id="packs-container">
 
-<p>📦 علب 120غ</p>
+        </div>
 
-<p>🚚 توصيل متوفر</p>
+    </section>
 
-</div>
 
 
-</section>
+    <!-- Pourquoi nous -->
 
+    <section class="advantages">
 
+        <div>
+            🌿
+            <h3>100٪ طبيعية</h3>
+        </div>
 
+        <div>
+            📦
+            <h3>وزن كل علبة 120غ</h3>
+        </div>
 
+        <div>
+            🚚
+            <h3>توصيل إلى جميع الولايات</h3>
+        </div>
 
-<section id="packs">
+    </section>
 
-<h2>
-باقاتنا
-</h2>
 
 
-<div id="packs-container">
+    <!-- Avis -->
 
-</div>
+    <section id="reviews">
 
+        <h2>آراء الزبائن</h2>
 
-</section>
-<section id="order">
+        <div class="reviews-container">
 
-<h2>
-اطلب الآن
-</h2>
+        </div>
 
+    </section>
 
-<form id="orderForm">
 
 
-<input 
-type="text" 
-id="firstname" 
-placeholder="الاسم"
-required>
+    <!-- Footer -->
 
+    <footer id="contact">
 
-<input 
-type="text" 
-id="lastname" 
-placeholder="اللقب"
-required>
+        <h3>Délicea 🌶️</h3>
 
+        <p>الباب إلى النكهة</p>
 
-<input 
-type="tel" 
-id="phone" 
-placeholder="رقم الهاتف"
-required>
+        <p>Instagram : @epicesdelicea</p>
 
+        <p>📞 0770715514</p>
 
+    </footer>
 
-<select id="packSelect">
 
-<option value="">
-اختر الباقة
-</option>
 
-</select>
-
-
-
-
-<select id="wilayaSelect">
-
-<option value="">
-اختر الولاية
-</option>
-
-</select>
-
-
-
-
-<select id="communeSelect">
-
-<option value="">
-اختر البلدية
-</option>
-
-</select>
-
-
-
-
-
-<textarea 
-id="address" 
-placeholder="العنوان الكامل">
-</textarea>
-
-
-
-
-
-<div class="price-box">
-
-<p>
-💰 سعر الباقة :
-<span id="packPrice">
-0
-</span>
-دج
-</p>
-
-
-<p>
-🚚 التوصيل :
-<span id="deliveryPrice">
-0
-</span>
-دج
-</p>
-
-
-<p>
-💵 المجموع :
-<span id="totalPrice">
-0
-</span>
-دج
-</p>
-
-
-</div>
-
-
-
-
-
-<button 
-type="button" 
-onclick="sendOrder()">
-
-إرسال الطلب
-
-</button>
-
-
-
-</form>
-
-
-</section>
-
-
-
-
-
-
-<section class="reviews">
-
-<h2>
-آراء الزبائن ⭐
-</h2>
-
-
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>
-توابل رائعة وجودة ممتازة
-</p>
-</div>
-
-
-<div class="review">
-⭐⭐⭐⭐⭐
-<p>
-وصلني الطلب والتغليف رائع
-</p>
-</div>
-
-
-</section>
-
-
-
-
-
-<a class="whatsapp"
-href="https://wa.me/213770715514">
-
-💬
-
-</a>
-
-
-
-
-
-<footer>
-
-<p>
-Délicea 🌶️
-</p>
-
-<p>
-الباب إلى النكهة
-</p>
-
-<p>
-Instagram : epicesdelicea
-</p>
-
-</footer>
-
-
-
-
-
-<script src="pack.js"></script>
-
-<script src="Wilaya.js"></script>
-
-<script src="Communes.js"></script>
-
-<script src="Delivery.js"></script>
-
-<script src="script.js"></script>
-
-
+    <script src="pack.js"></script>
 
 </body>
 
