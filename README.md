@@ -1,247 +1,120 @@
-# 🌿 Délicea Landing Page
+<div align="center">
 
-Landing Page premium inspirée de FlexDZ, spécialement conçue pour la vente d'épices, d'herbes aromatiques et de produits alimentaires **Délicea**.
+# 🌿 Delicea
+### Boutique en ligne d'épices & d'herbes aromatiques
+
+Une boutique moderne développée pour la marque **Delicea**, permettant de commander facilement des packs d'épices avec livraison dans toute l'Algérie.
+
+<img src="images/logo.png" width="180">
+
+</div>
+
+---
 
 ## ✨ Fonctionnalités
 
-- 🎨 Design premium moderne
-- 📱 Responsive (Mobile, Tablette, PC)
-- 🛒 Sélection du pack en un clic
-- 💰 Prix barrés et remises automatiques
-- ⭐ Badge "أفضل عرض"
-- 📦 4 packs personnalisables
-- 🧮 Calcul automatique du total
-- 🚚 Calcul des frais de livraison
-- 🇩🇿 Liste complète des 58 wilayas d'Algérie
-- 🏘️ Chargement automatique des communes selon la wilaya
-- 📲 Envoi automatique de la commande vers WhatsApp
-- 💬 Bouton WhatsApp flottant
-- 📌 Bouton fixe "اطلب الآن"
-- ⚡ Animations fluides
-- 🖼️ Images facilement remplaçables
-- 🌐 Compatible avec GitHub Pages, Netlify et Vercel
+- 📦 Présentation de 4 packs d'épices
+- 📱 Design Responsive (Mobile & Desktop)
+- 🌍 Interface en arabe (RTL)
+- 👀 Fenêtre "عرض المزيد"
+- 🛒 Commande simple et rapide
+- 🚚 Calcul automatique des frais de livraison
+- 📍 Sélection Wilaya & Commune
+- 💵 Paiement à la livraison
+- 📲 Commande via WhatsApp
+- ⭐ Avis clients
+- 📸 Galerie des photos des clients
 
 ---
 
-# 📂 Structure du projet
+## 🎁 Offres
 
-```
-delicea-landing-page/
-│
-├── index.html
-├── css/
-│   ├── style.css
-│   ├── responsive.css
-│   └── animations.css
-│
-├── js/
-│   ├── app.js
-│   ├── cart.js
-│   ├── delivery.js
-│   ├── wilayas.js
-│   ├── communes.js
-│   ├── whatsapp.js
-│   └── animations.js
-│
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   ├── logo/
-│   └── fonts/
-│
-├── README.md
-└── LICENSE
-```
+| Offre | Livraison |
+|--------|------------|
+| 📦 1 Pack | Tarif normal |
+| 📦📦 2 Packs | -20% sur la livraison |
+| 📦📦📦 3 Packs | -30% sur la livraison |
 
 ---
 
-# 🚀 Installation
+## 📦 Les Packs
 
-Clonez le dépôt :
-
-```bash
-git clone https://github.com/votre-utilisateur/delicea-landing-page.git
-```
-
-Entrez dans le dossier :
-
-```bash
-cd delicea-landing-page
-```
-
-Ouvrez simplement :
-
-```
-index.html
-```
-
-ou utilisez un serveur local.
+### 🟢 الباقة الأساسية
+**1950 DA**
 
 ---
 
-# ⚙️ Configuration
-
-## Logo
-
-Remplacez :
-
-```
-assets/logo/logo.png
-```
+### 👨‍🍳 باقة الشيف
+**2600 DA**
 
 ---
 
-## Photos des packs
-
-Remplacez :
-
-```
-assets/images/pack1.jpg
-assets/images/pack2.jpg
-assets/images/pack3.jpg
-assets/images/pack4.jpg
-```
+### ⭐ الباقة المميزة
+**2550 DA**
 
 ---
 
-## Numéro WhatsApp
-
-Dans :
-
-```
-js/whatsapp.js
-```
-
-Modifier :
-
-```javascript
-const phone = "213770715514";
-```
+### 🍲 باقة الكوزينة
+**2800 DA**
 
 ---
 
-## Packs
-
-Modifiez les informations dans :
-
-```javascript
-const packs = [
-  {
-    id:1,
-    name:"Pack Découverte",
-    price:290,
-    oldPrice:350
-  },
-  ...
-]
-```
-
----
-
-## Livraison
-
-Les frais sont définis dans :
-
-```
-js/delivery.js
-```
-
-Vous pouvez personnaliser chaque wilaya.
-
----
-
-# 📦 Déploiement
-
-## GitHub Pages
-
-Settings
-
-→ Pages
-
-→ Deploy from Branch
-
-→ main
-
-→ /(root)
-
----
-
-## Netlify
-
-Glissez simplement le dossier.
-
----
-
-## Vercel
-
-Importer le dépôt GitHub.
-
----
-
-# 🛠 Technologies
+## 🛠️ Technologies
 
 - HTML5
 - CSS3
-- JavaScript ES6
-- Font Awesome
-- Google Fonts
+- JavaScript (ES6)
+- Responsive Design
+- WhatsApp API
 
 ---
 
-# 📱 Compatibilité
+## 📂 Structure du projet
 
-- ✅ Chrome
-- ✅ Firefox
-- ✅ Edge
-- ✅ Safari
+```text
+delicea/
+│
+├── index.html
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── app.js
+│   ├── delivery.js
+│   ├── wilayas.js
+│   └── communes.js
+│
+├── images/
+│   ├── logo.png
+│   ├── packs/
+│   ├── banner/
+│   └── clients/
+│
+└── README.md
+```
+
+---
+
+## 📱 Compatible
+
 - ✅ Android
 - ✅ iPhone
+- ✅ Tablette
+- ✅ PC
 
 ---
 
-# 📋 Fonctionnement
+## 🚀 À venir
 
-1. Choisir un pack.
-2. Choisir la wilaya.
-3. Choisir la commune.
-4. Calcul automatique de la livraison.
-5. Affichage du total.
-6. Cliquer sur **اطلب الآن**.
-7. Envoi de la commande sur WhatsApp.
-
----
-
-# 🔮 Évolutions prévues
-
-- Paiement en ligne
-- Tableau d'administration
-- Historique des commandes
-- Gestion du stock
-- Pixel Facebook
-- Google Analytics
-- Code promo
-- Upsell
-- Multi-produits
-- Avis clients
-- Compteur de stock
-- Notifications en temps réel
+- ❤️ Liste des favoris
+- 🔍 Recherche de produits
+- 🌙 Mode sombre
+- 🎟️ Codes promo
+- 💳 Paiement électronique
+- 📊 Tableau de bord administrateur
 
 ---
 
-# 📄 Licence
+## © Delicea
 
-MIT License
-
----
-
-# 👨‍💻 Auteur
-
-Développé pour **Délicea**.
-
-📍 Algérie
-
-🌿 Fabrication et conditionnement d'épices, d'herbes aromatiques et de produits alimentaires.
-
----
-
-⭐ Si ce projet vous plaît, n'hésitez pas à laisser une étoile sur GitHub.
+Tous droits réservés.
