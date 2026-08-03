@@ -1,214 +1,149 @@
-let packChoisi = "";
-let prixPack = 0;
-let tarifLivraison = 0;
+let selectedPrice = 0;
 
 
+// اختيار الباقة
 
-// اختيار الباك
+function orderPack(name, price){
 
-function choisirPack(pack, prix){
+document.getElementById("packSelect").value = name;
 
-    packChoisi = pack;
-    prixPack = prix;
+document.getElementById("packPrice").innerHTML = price;
 
-    document.getElementById("pack").value = pack + " - " + prix + " DA";
+selectedPrice = price;
 
-
-    window.scrollTo({
-        top: document.querySelector(".commande").offsetTop,
-        behavior: "smooth"
-    });
+calculateTotal();
 
 
-    afficherTotal();
+document.getElementById("order").scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 
-// عرض تفاصيل الباك
 
-function voirDetails(){
+// تغيير الولاية
 
-    document.getElementById("detailsPack").style.display="block";
+document.getElementById("wilayaSelect").addEventListener("change",function(){
 
-}
+let wilaya = this.value;
 
-
-
-// إغلاق التفاصيل
-
-function fermerDetails(){
-
-    document.getElementById("detailsPack").style.display="none";
-
-}
+let delivery = getDeliveryPrice(wilaya);
 
 
-
-// حساب التوصيل
-
-function calculerLivraison(){
-
-let wilaya = document.getElementById("wilaya").value;
-
-let type = document.getElementById("typeLivraison").value;
+document.getElementById("deliveryPrice").innerHTML = delivery;
 
 
-let info = document.getElementById("infoLivraison");
+calculateTotal();
+
+
+});
 
 
 
-if(livraisons[wilaya]){
-
-
-    if(type=="domicile"){
-
-        tarifLivraison = livraisons[wilaya].domicile;
-
-    }
-
-
-    else if(type=="bureau"){
-
-        tarifLivraison = livraisons[wilaya].bureau;
-
-    }
-
-
-    else{
-
-        tarifLivraison = 0;
-
-    }
 
 
 
-    info.innerHTML =
+// حساب المجموع
 
-    "🚚 Délai : "
-    + livraisons[wilaya].delai
-    +"<br>💰 Livraison : "
-    + tarifLivraison
-    +" DA";
+function calculateTotal(){
 
-
-
-}
-
-else{
-
-tarifLivraison = 0;
-
-info.innerHTML="Choisir Wilaya";
-
-}
+let delivery = Number(
+document.getElementById("deliveryPrice").innerHTML
+) || 0;
 
 
-
-afficherTotal();
-
-
-}
+let total = selectedPrice + delivery;
 
 
-
-// affichage total
-
-function afficherTotal(){
-
-let total = prixPack + tarifLivraison;
-
-
-let zone = document.getElementById("totalCommande");
-
-
-if(zone){
-
-zone.innerHTML =
-"💰 Total à payer : "
-+ total
-+" DA";
-
-}
+document.getElementById("totalPrice").innerHTML = total;
 
 }
 
 
 
 
-// إرسال الطلب واتساب
-
-function envoyerCommande(){
 
 
-let nom =
-document.getElementById("nom").value;
+// إرسال WhatsApp
+
+function sendOrder(){
 
 
-let tel =
-document.getElementById("tel").value;
+let firstname =
+document.getElementById("firstname").value;
+
+
+let lastname =
+document.getElementById("lastname").value;
+
+
+let phone =
+document.getElementById("phone").value;
+
+
+let pack =
+document.getElementById("packSelect").value;
 
 
 let wilaya =
-document.getElementById("wilaya").value;
+document.getElementById("wilayaSelect").value;
 
 
 let commune =
-document.getElementById("commune").value;
+document.getElementById("communeSelect").value;
 
 
-let type =
-document.getElementById("typeLivraison").value;
-
-
-let adresse =
-document.getElementById("adresse").value;
+let address =
+document.getElementById("address").value;
 
 
 
-let total = prixPack + tarifLivraison;
+let price =
+document.getElementById("packPrice").innerHTML;
+
+
+let delivery =
+document.getElementById("deliveryPrice").innerHTML;
+
+
+let total =
+document.getElementById("totalPrice").innerHTML;
 
 
 
 let message =
 
-"🌶️ DELICEA - Nouvelle commande%0A%0A"+
+"🌶️ DELICEA - Nouvelle commande\n\n"+
 
-"📦 Pack : "+packChoisi+"%0A"+
+"📦 Pack : "+pack+"\n"+
 
-"💰 Prix : "+prixPack+" DA%0A"+
+"💰 Prix : "+price+" DA\n"+
 
-"🚚 Livraison : "+tarifLivraison+" DA%0A"+
+"🚚 Livraison : "+delivery+" DA\n"+
 
-"💵 Total : "+total+" DA%0A%0A"+
-
-"👤 Nom : "+nom+"%0A"+
-
-"📞 Téléphone : "+tel+"%0A"+
-
-"📍 Wilaya : "+wilaya+"%0A"+
-
-"🏘️ Commune : "+commune+"%0A"+
-
-"🚚 Type : "+type+"%0A"+
-
-"🏠 Adresse : "+adresse;
+"💵 Total : "+total+" DA\n\n"+
 
 
+"👤 Nom : "+firstname+" "+lastname+"\n"+
 
-let numero="213770715514";
+"📞 Téléphone : "+phone+"\n"+
+
+"📍 Wilaya : "+wilaya+"\n"+
+
+"🏘️ Commune : "+commune+"\n"+
+
+"🏠 Adresse : "+address;
 
 
 
 window.open(
 
-"https://wa.me/"+numero+"?text="+message,
-
-"_blank"
+"https://wa.me/213770715514?text="+
+encodeURIComponent(message)
 
 );
-
 
 
 }
