@@ -1,76 +1,737 @@
-html = """<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Délicea</title>
-<style>
-corps{marge:0;police:Arial,sans-serif;arrière-plan:#F8F6F2;couleur:#2f2f2f}
-header{background:#C62828;color:#fff;padding:20px;text-align:center}
-.hero{padding:30px;text-align:center}
-.hero .img,.pack .img{height:180px;border:2px dashed #bbb;border-radius:16px;display:flex;align-items:center;justify-content:center;background:#fff;margin:15px auto}
-.container{max-width:900px;margin:auto;padding:20px}
-.pack{background:#fff;border:2px solid #ddd;border-radius:18px;padding:20px;margin:20px 0;position:relative}
-.best{border-color:#C62828}
-.badge{position:absolute;top:-12px;right:20px;background:#C62828;color:#fff;padding:6px 14px;border-radius:20px}
-.price{color:#5E8C31;font-size:28px;font-weight:bold}
-.old{text-decoration:line-through;color:#999}
-.btn{display:block;background:#C62828;color:#fff;text-decoration:none;padding:16px;border-radius:12px;text-align:center;font-weight:bold}
-form{background:#fff;padding:20px;border-radius:18px}
-input,select,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:10px}
-pied de page{text-align:center;padding:20px}
-</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Délicea | Le Porte Saveur</title>
+
+<meta name="description" content="Commandez vos packs Délicea avec livraison dans les 58 wilayas d'Algérie.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
 </head>
-<corps>
-<header><h1>ديليسيا</h1><p>نكهات أصيلة من قلب الطبيعة</p></header>
-<div class="hero container">
-<div class="img">ضع صورة البانر هنا</div>
-<a class="btn" href="#order">اطلب الآن</a>
-</div>
+
+<body>
+
+<!--================ HEADER ================-->
+
+<header class="topbar">
+
 <div class="container">
-<h2 style="text-align:center">اختر الباقة المناسبة</h2>
 
-<div class="pack">
-<h3>الباقة الأساسية</h3>
-<div class="img">صورة الباقة</div>
-<div class="price">1950 DA</div>
+<div class="logo">
+
+<img src="assets/logo/logo.png" alt="Délicea">
+
 </div>
 
-<div class="pack best">
-<div class="badge">أفضل عرض</div>
-<h3>الباقة المميزة</h3>
-<div class="img">صورة الباقة</div>
-<div class="old">2700 DA</div>
-<div class="price">2550 DA</div>
-<p>🚚 توصيل مجاني</p>
+<nav>
+
+<a href="#packs">Packs</a>
+
+<a href="#commande">Commander</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
 </div>
 
-<div class="pack">
-<h3>باقة الشيف</h3>
-<div class="img">صورة الباقة</div>
-<div class="price">2600 DA</div>
+</header>
+
+<!--================ HERO ================-->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-text">
+
+<span class="badge">
+
+⭐ أفضل عرض
+
+</span>
+
+<h1>
+
+Les Packs Délicea
+
+</h1>
+
+<p>
+
+Composez votre cuisine avec les meilleurs mélanges d'épices.
+
+</p>
+
+<ul>
+
+<li>✔ 100% Naturel</li>
+
+<li>✔ Sans additifs</li>
+
+<li>✔ Paiement à la livraison</li>
+
+<li>✔ Livraison dans les 58 wilayas</li>
+
+</ul>
+
+<a href="#commande" class="btn">
+
+اطلب الآن
+
+</a>
+
 </div>
 
-<div class="pack">
-<h3>باقة الكوزينة</h3>
-<div class="img">صورة الباقة</div>
-<div class="old">3000 DA</div>
-<div class="price">2800 DA</div>
+<div class="hero-image">
+
+<img src="assets/images/packs.png" alt="Packs Délicea">
+
 </div>
 
-<h2 id="order">اطلب الآن</h2>
-<formulaire>
-<input placeholder="الاسم الكامل">
-<input placeholder="رقم الهاتف">
-<select><option>الولاية</option></select>
-<input placeholder="البلدية">
-<textarea placeholder="العنوان"></textarea>
-<button class="btn" type="submit">تأكيد الطلب</button>
+</div>
+
+</section>
+
+<!--================ PACKS ================-->
+
+<section id="packs">
+
+<div class="container">
+
+<h2>
+
+Choisissez votre pack
+
+</h2>
+
+<div class="pack-grid">
+
+<!-- Pack 1 -->
+
+<div class="pack"
+
+data-name="Pack Essentiel"
+
+data-price="1950">
+
+<img src="assets/images/pack1.jpg">
+
+<h3>
+
+Pack Essentiel
+
+</h3>
+
+<p>
+
+8 Épices
+
+</p>
+
+<div class="price">
+
+1950 DA
+
+</div>
+
+<button>
+
+Choisir
+
+</button>
+
+</div>
+
+<!-- Pack 2 -->
+
+<div class="pack"
+
+data-name="Pack Chef"
+
+data-price="2600">
+
+<img src="assets/images/pack2.jpg">
+
+<h3>
+
+Pack Chef
+
+</h3>
+
+<p>
+
+10 Épices
+
+</p>
+
+<div class="price">
+
+2600 DA
+
+</div>
+
+<button>
+
+Choisir
+
+</button>
+
+</div>
+
+<!-- Pack 3 -->
+
+<div class="pack"
+
+data-name="Pack Premium"
+
+data-price="2550">
+
+<img src="assets/images/pack3.jpg">
+
+<h3>
+
+Pack Premium
+
+</h3>
+
+<p>
+
+10 Épices
+
+</p>
+
+<div class="price">
+
+2550 DA
+
+</div>
+
+<button>
+
+Choisir
+
+</button>
+
+</div>
+
+<!-- Pack 4 -->
+
+<div class="pack best"
+
+data-name="Pack Cuisine"
+
+data-price="2800">
+
+<span class="best-badge">
+
+أفضل عرض
+
+</span>
+
+<img src="assets/images/pack4.jpg">
+
+<h3>
+
+Pack Cuisine
+
+</h3>
+
+<p>
+
+12 Épices
+
+</p>
+
+<div class="price">
+
+2800 DA
+
+</div>
+
+<button>
+
+Choisir
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- ========================= -->
+<!-- COMMANDE -->
+<!-- ========================= -->
+
+<section id="commande" class="order-section">
+
+<div class="container">
+
+<h2>Commander votre Pack</h2>
+
+<form id="orderForm">
+
+<div class="form-group">
+
+<label>Nom et prénom *</label>
+
+<input
+type="text"
+id="fullname"
+placeholder="Votre nom"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Téléphone *</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="0555 00 00 00"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label>Wilaya *</label>
+
+<select id="wilaya" required>
+
+<option value="">Sélectionnez votre wilaya</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Commune *</label>
+
+<select id="commune" required>
+
+<option value="">Choisissez votre commune</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Adresse complète *</label>
+
+<textarea
+id="address"
+rows="4"
+placeholder="Quartier, rue, numéro..."
+required></textarea>
+
+</div>
+
+<div class="form-group">
+
+<label>Mode de livraison</label>
+
+<select id="deliveryType">
+
+<option value="home">
+
+Livraison à domicile
+
+</option>
+
+<option value="office">
+
+Retrait au bureau
+
+</option>
+
+</select>
+
+</div>
+
+<!-- Résumé -->
+
+<div class="order-summary">
+
+<h3>Résumé</h3>
+
+<div class="row">
+
+<span>Pack :</span>
+
+<strong id="selectedPack">
+
+Pack Essentiel
+
+</strong>
+
+</div>
+
+<div class="row">
+
+<span>Prix :</span>
+
+<strong id="productPrice">
+
+1950 DA
+
+</strong>
+
+</div>
+
+<div class="row">
+
+<span>Livraison :</span>
+
+<strong id="deliveryPrice">
+
+0 DA
+
+</strong>
+
+</div>
+
+<hr>
+
+<div class="row total">
+
+<span>Total :</span>
+
+<strong id="totalPrice">
+
+1950 DA
+
+</strong>
+
+</div>
+
+</div>
+
+<button
+type="submit"
+class="btn-order">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+اطلب الآن
+
+</button>
+
 </form>
-</div>
-<footer>© Délicea</footer>
-</body></html>"""
-chemin=Chemin("/mnt/data/index.html")
-chemin.écrire_texte(html,encodage="utf-8")
-imprimer(chemin)
 
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- AVANTAGES -->
+<!-- ========================= -->
+
+<section class="features">
+
+<div class="container">
+
+<div class="feature">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Livraison rapide</h3>
+
+<p>58 wilayas d'Algérie</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h3>Paiement</h3>
+
+<p>À la livraison</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-leaf"></i>
+
+<h3>100% Naturel</h3>
+
+<p>Sans additifs</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-medal"></i>
+
+<h3>Qualité Premium</h3>
+
+<p>Épices sélectionnées</p>
+
+</div>
+
+</div>
+
+</section>
+  <!-- ========================= -->
+<!-- AVIS CLIENTS -->
+<!-- ========================= -->
+
+<section id="reviews" class="reviews">
+
+<div class="container">
+
+<h2>Ils nous font confiance</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+★★★★★
+
+<p>
+
+Très bonne qualité.
+
+Les épices sentent vraiment fraîches.
+
+</p>
+
+<h4>Karima - Alger</h4>
+
+</div>
+
+<div class="review-card">
+
+★★★★★
+
+<p>
+
+Livraison rapide.
+
+Je recommande Délicea.
+
+</p>
+
+<h4>Samir - Oran</h4>
+
+</div>
+
+<div class="review-card">
+
+★★★★★
+
+<p>
+
+Excellent rapport qualité/prix.
+
+Je recommanderai.
+
+</p>
+
+<h4>Nadia - Constantine</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- GALERIE -->
+<!-- ========================= -->
+
+<section class="gallery">
+
+<div class="container">
+
+<h2>Nos Packs</h2>
+
+<div class="gallery-grid">
+
+<img src="assets/images/pack1.jpg" alt="Pack Essentiel">
+
+<img src="assets/images/pack2.jpg" alt="Pack Chef">
+
+<img src="assets/images/pack3.jpg" alt="Pack Premium">
+
+<img src="assets/images/pack4.jpg" alt="Pack Cuisine">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FAQ -->
+<!-- ========================= -->
+
+<section class="faq">
+
+<div class="container">
+
+<h2>Questions fréquentes</h2>
+
+<div class="faq-item">
+
+<h3>Comment commander ?</h3>
+
+<p>
+
+Choisissez votre pack, remplissez le formulaire puis cliquez sur "اطلب الآن".
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Le paiement est-il sécurisé ?</h3>
+
+<p>
+
+Oui, le paiement s'effectue uniquement à la livraison.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Livrez-vous partout en Algérie ?</h3>
+
+<p>
+
+Oui, nous livrons dans les 58 wilayas.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2>Contact</h2>
+
+<p>
+
+📞 0770 71 55 14
+
+</p>
+
+<p>
+
+🌐 store.deliceadz.com
+
+</p>
+
+<p>
+
+📷 Instagram : @epicesdelicea
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- BOUTONS FLOTTANTS -->
+<!-- ========================= -->
+
+<a href="https://wa.me/213770715514"
+
+class="whatsapp-float"
+
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a href="#commande"
+
+class="order-fixed">
+
+اطلب الآن
+
+</a>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<div class="container">
+
+<img src="assets/logo/logo.png" class="footer-logo">
+
+<p>
+
+© 2026 Délicea - Le Porte Saveur
+
+</p>
+
+<p>
+
+Fabrication et conditionnement d'épices, herbes aromatiques et produits alimentaires.
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
+
+<script src="js/packs.js"></script>
+
+<script src="js/wilayas.js"></script>
+
+<script src="js/communes.js"></script>
+
+<script src="js/delivery.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
+</section>
