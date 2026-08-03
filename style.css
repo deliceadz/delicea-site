@@ -1,449 +1,243 @@
-/* ==========================
-   DELICEA STYLE
-========================== */
-
-
 *{
-    margin:0;
-    padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
 }
-
 
 body{
-
-    background:#f8f3e8;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f0e6;
     color:#333;
-
+    direction:rtl;
 }
-
-
 
 
 /* HEADER */
 
 header{
-
     background:#556b2f;
-    padding:15px;
+    padding:20px;
     text-align:center;
-
 }
-
 
 .logo img{
-
-    width:160px;
-
+    width:180px;
 }
 
 
-
-
-
-/* BANNIERE */
+/* BANNER */
 
 .banner{
-
     position:relative;
+    width:100%;
     overflow:hidden;
-
 }
 
-
 .banner img{
-
     width:100%;
     height:350px;
     object-fit:cover;
-
 }
 
-
-
 .banner-text{
-
     position:absolute;
     top:50%;
     right:50%;
     transform:translate(50%,-50%);
-
     background:rgba(0,0,0,0.45);
-    color:white;
-
     padding:25px;
     border-radius:15px;
+    color:white;
     text-align:center;
-
 }
-
 
 .banner-text h1{
-
     font-size:35px;
-
 }
 
-
+.banner-text p{
+    font-size:20px;
+}
 
 
 /* PACKS */
 
-
 .packs{
-
     padding:40px 20px;
     text-align:center;
-
 }
-
 
 .packs h2,
 .why h2,
 .order h2,
-.reviews h2,
-.customers h2{
-
-    color:#7b1e1e;
-    margin-bottom:30px;
-
+.reviews h2{
+    color:#8b0000;
+    font-size:30px;
 }
-
 
 
 #packs-container{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:25px;
-
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
 }
-
-
-
 
 
 .pack-card{
-
     background:white;
-
-    border-radius:20px;
-
+    width:280px;
     padding:20px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.15);
-
+    border-radius:15px;
+    box-shadow:0 5px 15px #ccc;
 }
-
 
 
 .pack-card img{
-
     width:100%;
     height:220px;
-
     object-fit:cover;
-
-    border-radius:15px;
-
 }
 
 
-
-.pack-card h3{
-
-    color:#556b2f;
-    margin:15px;
-
-}
-
-
-
-.pack-card button,
-.order button,
-#modal-order{
-
-
-    background:#7b1e1e;
-
+button{
+    background:#556b2f;
     color:white;
-
     border:none;
-
-    padding:12px 25px;
-
-    border-radius:25px;
-
+    padding:15px 25px;
+    border-radius:10px;
     cursor:pointer;
-
-    font-size:16px;
-
+    font-size:18px;
 }
 
 
-
-button:hover{
-
-    opacity:0.8;
-
-}
-
-
-
-
-
-
-/* POURQUOI DELICEA */
-
+/* WHY */
 
 .why{
-
-    padding:40px 20px;
-
+    background:#fff;
+    padding:40px;
     text-align:center;
-
 }
 
 
 .why-box{
-
     display:flex;
-
     justify-content:center;
-
-    gap:20px;
-
+    gap:30px;
     flex-wrap:wrap;
-
 }
-
 
 
 .why-box div{
-
-    background:white;
-
+    background:#f5f0e6;
     padding:25px;
-
-    width:250px;
-
     border-radius:15px;
-
+    width:220px;
 }
 
 
-
-
-
-
-/* MODAL */
-
-
-.modal{
-
-    display:none;
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.6);
-
-    z-index:10;
-
-}
-
-
-
-.modal-content{
-
-    background:white;
-
-    width:90%;
-
-    max-width:500px;
-
-    margin:5% auto;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-}
-
-
-
-.modal-content img{
-
-    width:250px;
-
-    border-radius:15px;
-
-}
-
-
-
-.close{
-
-    float:left;
-
-    font-size:30px;
-
-    cursor:pointer;
-
-}
-
-
-
-
-
-/* FORMULAIRE */
-
+/* ORDER */
 
 .order{
-
     padding:40px 20px;
-
 }
 
 
-
-#order-form{
-
-    background:white;
-
-    max-width:600px;
-
+form{
+    max-width:500px;
     margin:auto;
-
-    padding:25px;
-
-    border-radius:20px;
-
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px #ccc;
 }
 
 
-
-#order-form label{
-
+label{
     display:block;
-
     margin-top:15px;
-
+    color:#556b2f;
 }
 
 
-
-#order-form input,
-#order-form select,
-#order-form textarea{
-
-
+input,
+select,
+textarea{
     width:100%;
-
     padding:12px;
-
     margin-top:5px;
-
-    border:1px solid #ddd;
-
-    border-radius:10px;
-
+    border:1px solid #ccc;
+    border-radius:8px;
 }
 
 
+/* REVIEWS */
 
-
-
-/* AVIS */
-
-
-.reviews,
-.customers{
-
-    padding:40px 20px;
-
+.reviews{
+    padding:40px;
     text-align:center;
-
 }
-
 
 
 .review-box{
-
     background:white;
-
     padding:25px;
-
     border-radius:15px;
-
+    max-width:400px;
+    margin:auto;
 }
-
-
-
-
-#customer-images img{
-
-    width:250px;
-
-    margin:10px;
-
-    border-radius:15px;
-
-}
-
-
-
 
 
 /* FOOTER */
 
-
 footer{
-
-    background:#556b2f;
-
+    background:#8b0000;
     color:white;
-
     text-align:center;
-
     padding:30px;
-
 }
 
 
+/* MODAL */
 
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+}
+
+
+.modal-content{
+    background:white;
+    width:90%;
+    max-width:450px;
+    margin:80px auto;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+
+.close{
+    float:left;
+    font-size:30px;
+    cursor:pointer;
+}
 
 
 /* MOBILE */
 
-
-@media(max-width:600px){
-
+@media(max-width:700px){
 
 .banner img{
-
     height:250px;
-
 }
-
 
 .banner-text h1{
-
     font-size:25px;
-
 }
-
 
 }
