@@ -1,4 +1,4 @@
-
+alert("wilayas OK");
 const wilayas = [
 
 "1 - Adrar",
