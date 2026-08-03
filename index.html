@@ -1,441 +1,267 @@
 <!DOCTYPE html>
-<html lang="fr" dir="rtl">
-
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Delicea | Épices & Plantes Aromatiques</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Delicea - Fabrication et conditionnement d'épices, herbes aromatiques et mélanges d'épices en Algérie.">
 
-<title>Delicea - Épices & Saveurs</title>
+    <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 
 <body>
 
+<!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="logo">
+    <div class="container">
 
-<img src="images/logo.png" alt="Delicea">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Delicea">
+        </a>
 
-</div>
+        <nav>
+
+            <ul>
+
+                <li><a href="index.html">Accueil</a></li>
+
+                <li><a href="packs.html">Nos Packs</a></li>
+
+                <li><a href="#about">À propos</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
 
 </header>
 
+<!-- ================= HERO ================= -->
 
+<section class="hero">
 
+    <div class="overlay"></div>
 
+    <div class="hero-content">
 
-<section class="banner">
+        <h1>
+            DELICEA
+        </h1>
 
-<img src="images/banner.jpg" alt="Delicea">
+        <h2>
+            Épices & Plantes Aromatiques
+        </h2>
 
-<div class="banner-text">
+        <p>
 
-<h1>
-نكهات أصيلة لمطبخك
-</h1>
+            Découvrez nos mélanges d'épices sélectionnés
+            pour donner des saveurs authentiques à votre cuisine.
 
-<p>
-توابل وأعشاب عطرية بجودة عالية
-</p>
+        </p>
 
-</div>
+        <a href="packs.html" class="btn">
 
-</section>
+            Découvrir nos Packs
 
+        </a>
 
-
-
-
-
-
-<section class="packs">
-
-<h2>
-اختر باقتك المفضلة
-</h2>
-
-
-<div id="packs-container">
-
-</div>
-
+    </div>
 
 </section>
 
+<!-- ================= AVANTAGES ================= -->
 
+<section class="advantages">
 
+    <div class="container">
 
+        <div class="box">
 
+            <i class="fa-solid fa-seedling"></i>
 
+            <h3>Qualité Premium</h3>
 
+            <p>
 
-<section class="why">
+                Épices soigneusement sélectionnées.
 
-<h2>
-لماذا تختار دليسيا؟
-</h2>
+            </p>
 
+        </div>
 
-<div class="why-box">
+        <div class="box">
 
+            <i class="fa-solid fa-truck-fast"></i>
 
-<div>
-🌿
-<h3>جودة عالية</h3>
-<p>منتجات مختارة بعناية</p>
-</div>
+            <h3>Livraison</h3>
 
+            <p>
 
-<div>
-🏭
-<h3>صناعة جزائرية</h3>
-<p>تحضير وتغليف احترافي</p>
-</div>
+                Livraison dans toute l'Algérie.
 
+            </p>
 
-<div>
-🚚
-<h3>توصيل سريع</h3>
-<p>كل الولايات</p>
-</div>
+        </div>
 
+        <div class="box">
 
-</div>
+            <i class="fa-solid fa-box-open"></i>
 
+            <h3>Conditionnement</h3>
+
+            <p>
+
+                Emballage propre et sécurisé.
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h3>Saveurs</h3>
+
+            <p>
+
+                Des recettes riches en goût.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
+<!-- ================= PACKS ================= -->
 
+<section class="home-packs">
 
+    <div class="container">
 
+        <h2>
 
+            Nos Packs
 
+        </h2>
 
+        <div id="packsAccueil" class="cards">
 
-<!-- DETAILS PACK -->
+            <!-- Les packs seront ajoutés automatiquement -->
 
-<div id="pack-modal" class="modal">
+        </div>
 
+        <div class="center">
 
-<div class="modal-content">
+            <a href="packs.html" class="btn">
 
+                Voir tous les packs
 
-<span class="close">
-×
-</span>
+            </a>
 
+        </div>
 
-<img id="modal-image">
-
-
-<h2 id="modal-name"></h2>
-
-<h3 id="modal-price"></h3>
-
-<p id="modal-description"></p>
-
-
-<ul id="modal-composition"></ul>
-
-
-<button id="modal-order">
-🛒 اطلب الآن
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- COMMANDE -->
-
-
-<section class="order" id="commande">
-
-
-<h2>
-🛒 تأكيد الطلب
-</h2>
-
-
-
-
-<form id="order-form">
-
-
-<label>
-الاسم
-</label>
-
-<input id="nom" required>
-
-
-
-
-<label>
-اللقب
-</label>
-
-<input id="prenom" required>
-
-
-
-
-<label>
-رقم الهاتف
-</label>
-
-<input id="telephone" required>
-
-
-
-
-
-
-<label>
-الولاية
-</label>
-
-
-<select id="wilaya">
-
-<option>
-اختيار الولاية
-</option>
-
-</select>
-
-
-
-
-
-
-
-<label>
-البلدية
-</label>
-
-
-<select id="commune">
-
-<option>
-اختيار البلدية
-</option>
-
-</select>
-
-
-
-
-
-
-
-<label>
-العنوان
-</label>
-
-
-<textarea id="adresse"></textarea>
-
-
-
-
-
-
-
-
-<label>
-نوع التوصيل
-</label>
-
-
-<select id="livraison">
-
-
-<option value="home">
-توصيل للمنزل
-</option>
-
-
-<option value="bureau">
-مكتب
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-
-
-<label>
-عدد الباقات
-</label>
-
-
-<select id="quantity">
-
-
-<option value="1">
-1 Pack
-</option>
-
-
-<option value="2">
-2 Packs (خصم 20٪ على التوصيل)
-</option>
-
-
-<option value="3">
-3 Packs (خصم 30٪ على التوصيل)
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-<p>
-🚚 التوصيل :
-<span id="livraison-prix">
-0 DA
-</span>
-</p>
-
-
-
-
-
-<h3>
-
-💰 المجموع :
-
-<span id="total">
-0 DA
-</span>
-
-</h3>
-
-
-
-
-
-
-
-<button type="submit">
-
-🟢 تأكيد الطلب عبر واتساب
-
-</button>
-
-
-</form>
-
+    </div>
 
 </section>
 
+<!-- ================= A PROPOS ================= -->
 
+<section id="about" class="about">
 
+    <div class="container">
 
+        <h2>
 
+            À propos de Delicea
 
+        </h2>
 
+        <p>
 
-<section class="reviews">
+            Delicea est spécialisée dans la fabrication,
+            le conditionnement et la distribution d'épices,
+            plantes aromatiques et mélanges de qualité.
 
+        </p>
 
-<h2>
-⭐ آراء زبائننا
-</h2>
-
-
-<div class="review-box">
-
-جودة رائعة وطعم مميز
-
-</div>
-
+    </div>
 
 </section>
 
+<!-- ================= CONTACT ================= -->
 
+<section id="contact" class="contact">
 
+    <div class="container">
 
+        <h2>
 
+            Contact
 
+        </h2>
 
+        <p>
+
+            📞 Téléphone
+
+        </p>
+
+        <p>
+
+            💬 WhatsApp
+
+        </p>
+
+        <p>
+
+            📧 Email
+
+        </p>
+
+        <p>
+
+            📍 Algérie
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
+    <p>
 
-<h3>
-Delicea
-</h3>
+        © 2026 DELICEA
 
-
-<p>
-🌿 توابل وأعشاب عطرية
-</p>
-
-
-<p>
-📞 0770715514
-</p>
-
-
-<p>
-📲 WhatsApp : 0770715514
-</p>
-
+    </p>
 
 </footer>
 
-
-
-
-
-
-
-
-
-<!-- JAVASCRIPT -->
-
-<script src="js/wilayas.js"></script>
-
-<script src="js/communes.js"></script>
-
-<script src="js/delivery.js"></script>
+<!-- Scripts -->
 
 <script src="js/packs.js"></script>
 
 <script src="js/app.js"></script>
 
-
-
 </body>
-
 </html>
