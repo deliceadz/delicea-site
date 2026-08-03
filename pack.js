@@ -1,245 +1,236 @@
+//======================================
+// DELICEA
+// packs.js
+//======================================
 
 const packs = [
 
-
 {
     id:1,
-    nom:"الباقة الأساسية",
-    prix:1950,
-    image:"images/packs/base.jpg",
-    nombre:"8 أنواع من التوابل",
 
-    description:
-    "باقة أساسية تجمع أهم التوابل اليومية للمطبخ الجزائري",
+    nom:"Pack Essentiel",
+
+    nomAr:"الباقة الأساسية",
+
+    prix:1950,
+
+    ancienPrix:2200,
+
+    remise:11,
+
+    image:"images/packs/pack1.png",
+
+    nombre:8,
+
+    poids:"120 g",
+
+    poidsTotal:"960 g",
 
     composition:[
+
+        "Curcuma moulu",
+        "Cumin moulu",
+        "Coriandre moulue",
+        "Cannelle moulue",
+        "Paprika",
+        "Poivre noir",
+        "Gingembre moulu",
+        "Ail moulu"
+
+    ],
+
+    compositionAr:[
+
         "كركم مرحي",
         "كمون مرحي",
-        "كروية مرحية",
         "قصبر مرحي",
-        "فلفل أسود مرحي",
         "قرفة مرحية",
-        "بابريكا",
-        "أعشاب عطرية"
+        "فلفل أحمر حلو",
+        "فلفل أسود مرحي",
+        "زنجبيل مرحي",
+        "ثوم مرحي"
+
     ]
 
 },
-
-
 
 {
     id:2,
-    nom:"باقة الذوق",
-    prix:2950,
-    image:"images/packs/saveur.jpg",
-    nombre:"12 نوع من التوابل",
 
-    description:
-    "مجموعة متنوعة لتحضير وصفات لذيذة",
+    nom:"Pack Chef",
+
+    nomAr:"باقة الشيف",
+
+    prix:2600,
+
+    ancienPrix:2900,
+
+    remise:10,
+
+    image:"images/packs/pack2.png",
+
+    nombre:10,
+
+    poids:"120 g",
+
+    poidsTotal:"1200 g",
 
     composition:[
+
+        "Curcuma",
+        "Cumin",
+        "Poivre noir",
+        "Paprika",
+        "Cannelle",
+        "Coriandre",
+        "Ail",
+        "Gingembre",
+        "Herbes de Provence",
+        "Ras El Hanout"
+
+    ],
+
+    compositionAr:[
+
         "كركم",
         "كمون",
-        "قصبر",
         "فلفل أسود",
+        "فلفل أحمر",
         "قرفة",
+        "قصبر",
+        "ثوم",
         "زنجبيل",
-        "رأس الحانوت",
-        "أعشاب بروفانس"
+        "أعشاب عطرية",
+        "رأس الحانوت"
+
     ]
 
 },
-
-
 
 {
     id:3,
-    nom:"الباقة الممتازة",
-    prix:3950,
-    image:"images/packs/premium.jpg",
-    nombre:"18 نوع من التوابل",
 
-    description:
-    "باقة كاملة لمحبي النكهات الأصيلة",
+    nom:"Pack Premium",
+
+    nomAr:"الباقة الممتازة",
+
+    prix:2550,
+
+    ancienPrix:2850,
+
+    remise:10,
+
+    image:"images/packs/pack3.png",
+
+    nombre:10,
+
+    poids:"120 g",
+
+    poidsTotal:"1200 g",
 
     composition:[
-        "توابل الدجاج",
-        "توابل اللحم",
-        "توابل السمك",
+
+        "Curry",
+        "Paprika",
+        "Curcuma",
+        "Poivre noir",
+        "Coriandre",
+        "Cumin",
+        "Cannelle",
+        "Ail",
+        "Gingembre",
+        "Piment doux"
+
+    ],
+
+    compositionAr:[
+
         "كاري",
-        "شاورما",
-        "رأس الحانوت",
-        "كسكس",
-        "شربة"
+        "فلفل أحمر",
+        "كركم",
+        "فلفل أسود",
+        "قصبر",
+        "كمون",
+        "قرفة",
+        "ثوم",
+        "زنجبيل",
+        "فلفل حلو"
+
     ]
 
 },
 
-
-
 {
     id:4,
-    nom:"باقة العائلة",
-    prix:4950,
-    image:"images/packs/maison.jpg",
-    nombre:"مجموعة المطبخ الكامل",
 
-    description:
-    "كل ما تحتاجه العائلة في باقة واحدة",
+    nom:"Pack Cuisine",
+
+    nomAr:"باقة المطبخ",
+
+    prix:2800,
+
+    ancienPrix:3200,
+
+    remise:12,
+
+    image:"images/packs/pack4.png",
+
+    nombre:12,
+
+    poids:"120 g",
+
+    poidsTotal:"1440 g",
 
     composition:[
-        "توابل يومية",
+
+        "Curcuma",
+        "Cumin",
+        "Paprika",
+        "Poivre noir",
+        "Cannelle",
+        "Coriandre",
+        "Ail",
+        "Gingembre",
+        "Ras El Hanout",
+        "Herbes de Provence",
+        "Origan",
+        "Basilic"
+
+    ],
+
+    compositionAr:[
+
+        "كركم",
+        "كمون",
+        "فلفل أحمر",
+        "فلفل أسود",
+        "قرفة",
+        "قصبر",
+        "ثوم",
+        "زنجبيل",
+        "رأس الحانوت",
         "أعشاب عطرية",
-        "خلطات خاصة",
-        "توابل المشويات",
-        "توابل الأطباق التقليدية"
+        "زعتر",
+        "حبق"
+
     ]
 
 }
 
-
 ];
 
+//===============================
+// Recherche d'un pack
+//===============================
 
+function getPack(id){
 
-
-
-
-const container =
-document.getElementById("packs-container");
-
-
-
-packs.forEach(pack=>{
-
-
-container.innerHTML += `
-
-
-<div class="pack-card">
-
-
-<img src="${pack.image}">
-
-
-<h3>
-${pack.nom}
-</h3>
-
-
-<h4>
-${pack.prix} دج
-</h4>
-
-
-<p>
-${pack.nombre}
-</p>
-
-
-
-<button onclick="showPack(${pack.id})">
-
-👁️ عرض المزيد
-
-</button>
-
-
-<br><br>
-
-
-<button onclick="choisirPack(${pack.id});goCommande();">
-
-🛒 اطلب الآن
-
-</button>
-
-
-</div>
-
-
-`;
-
-});
-
-
-
-
-
-
-
-
-
-function showPack(id){
-
-
-let pack =
-packs.find(p=>p.id===id);
-
-
-
-document.getElementById("modal-image").src =
-pack.image;
-
-
-document.getElementById("modal-name").innerHTML =
-pack.nom;
-
-
-document.getElementById("modal-price").innerHTML =
-pack.prix+" دج";
-
-
-document.getElementById("modal-description").innerHTML =
-pack.description;
-
-
-
-let liste =
-document.getElementById("modal-composition");
-
-
-liste.innerHTML="";
-
-
-
-pack.composition.forEach(item=>{
-
-
-liste.innerHTML +=
-`
-<li>${item}</li>
-`;
-
-
-});
-
-
-
-document.getElementById("pack-modal").style.display="block";
-
+    return packs.find(pack => pack.id == id);
 
 }
 
+//===============================
+// Affichage console
+//===============================
 
-
-
-
-
-
-
-
-
-function goCommande(){
-
-
-document
-.getElementById("commande")
-.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-}
+console.log("Packs chargés :", packs);
