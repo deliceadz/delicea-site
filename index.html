@@ -2,82 +2,151 @@
 <html lang="fr" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Delicea - Épices & Saveurs</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Delicea - Épices & Saveurs</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
+
 
 <body>
 
+
+<!-- LOGO -->
+
 <header>
-    <div class="logo">
-        <img src="images/logo.png" alt="Delicea">
-    </div>
+
+<div class="logo">
+
+<img src="images/logo.png" alt="Delicea">
+
+</div>
+
 </header>
 
 
+
+
+
+<!-- BANNIERE -->
+
 <section class="banner">
 
-    <img src="images/banner.jpg" alt="Delicea">
+<img src="images/banner.jpg" alt="Delicea">
 
-    <div class="banner-text">
-        <h1>نكهات أصيلة لمطبخك</h1>
-        <p>توابل وأعشاب عطرية بجودة عالية</p>
-    </div>
+<div class="banner-text">
+
+<h1>
+نكهات أصيلة لمطبخك
+</h1>
+
+<p>
+توابل وأعشاب عطرية بجودة عالية
+</p>
+
+</div>
 
 </section>
 
 
+
+
+
+
+<!-- PACKS -->
 
 <section class="packs">
 
-    <h2>اختر باقتك المفضلة</h2>
+<h2>
+اختر باقتك المفضلة
+</h2>
 
-    <div id="packs-container">
 
-    </div>
+<div id="packs-container">
+
+</div>
+
 
 </section>
 
 
 
+
+
+
+
+<!-- POURQUOI DELICEA -->
 
 
 <section class="why">
 
-<h2>لماذا تختار دليسيا؟</h2>
+
+<h2>
+لماذا تختار دليسيا؟
+</h2>
+
 
 
 <div class="why-box">
 
 
 <div>
+
 🌿
-<h3>جودة عالية</h3>
-<p>منتجات مختارة بعناية</p>
+
+<h3>
+جودة عالية
+</h3>
+
+<p>
+منتجات مختارة بعناية
+</p>
+
 </div>
 
 
 
+
 <div>
+
 🏭
-<h3>صناعة جزائرية</h3>
-<p>تحضير وتغليف احترافي</p>
+
+<h3>
+صناعة جزائرية
+</h3>
+
+<p>
+تحضير وتغليف احترافي
+</p>
+
 </div>
+
 
 
 
 <div>
+
 🚚
-<h3>توصيل سريع</h3>
-<p>إلى جميع الولايات</p>
+
+<h3>
+توصيل سريع
+</h3>
+
+<p>
+إلى جميع الولايات
+</p>
+
 </div>
 
 
+
 </div>
+
 
 </section>
 
@@ -87,7 +156,9 @@
 
 
 
-<!-- نافذة تفاصيل الباقة -->
+
+
+<!-- DETAIL PACK -->
 
 <div id="pack-modal" class="modal">
 
@@ -112,30 +183,39 @@
 <p id="modal-description"></p>
 
 
-
 <h4>
-المكونات :
+المكونات
 </h4>
 
 
-<ul id="modal-composition"></ul>
+<ul id="modal-composition">
+
+</ul>
 
 
 
 <button id="modal-order">
+
 🛒 اطلب الآن
+
 </button>
 
 
-</div>
-
 
 </div>
 
 
+</div>
 
 
 
+
+
+
+
+
+
+<!-- COMMANDE -->
 
 
 <section class="order" id="commande">
@@ -144,6 +224,7 @@
 <h2>
 🛒 تأكيد الطلب
 </h2>
+
 
 
 
@@ -158,11 +239,14 @@
 
 
 
+
 <label>
 اللقب
 </label>
 
 <input id="prenom" type="text" required>
+
+
 
 
 
@@ -174,9 +258,12 @@
 
 
 
+
+
 <label>
 الولاية
 </label>
+
 
 <select id="wilaya">
 
@@ -188,9 +275,13 @@
 
 
 
+
+
+
 <label>
 البلدية
 </label>
+
 
 <select id="commune">
 
@@ -202,11 +293,20 @@
 
 
 
+
+
+
+
 <label>
 العنوان
 </label>
 
+
 <textarea id="adresse"></textarea>
+
+
+
+
 
 
 
@@ -218,12 +318,12 @@
 <select id="livraison">
 
 
-<option>
+<option value="home">
 توصيل للمنزل
 </option>
 
 
-<option>
+<option value="point">
 نقطة استلام
 </option>
 
@@ -234,9 +334,12 @@
 
 
 
+
+
 <label>
 عدد الباقات
 </label>
+
 
 
 <select id="quantity">
@@ -263,10 +366,22 @@
 
 
 
+
 <h3>
+
 💰 Total :
-<span id="total">0</span> دج
+
+<span id="total">
+1950
+</span>
+
+دج
+
 </h3>
+
+
+
+
 
 
 
@@ -275,6 +390,7 @@
 🟢 تأكيد الطلب عبر واتساب
 
 </button>
+
 
 
 </form>
@@ -288,6 +404,10 @@
 
 
 
+
+<!-- AVIS -->
+
+
 <section class="reviews">
 
 
@@ -296,9 +416,7 @@
 </h2>
 
 
-
 <div class="review-box">
-
 
 <p>
 جودة رائعة وطعم مميز
@@ -321,6 +439,9 @@
 
 
 
+<!-- PHOTOS CLIENTS -->
+
+
 <section class="customers">
 
 
@@ -329,12 +450,15 @@
 </h2>
 
 
+
 <div id="customer-images">
 
 
 <img src="images/client1.jpg">
 
+
 <img src="images/client2.jpg">
+
 
 
 </div>
@@ -347,6 +471,10 @@
 
 
 
+
+
+
+<!-- FOOTER -->
 
 
 <footer>
@@ -384,9 +512,21 @@ Delicea
 
 
 
+
+
+<!-- JAVASCRIPT -->
+
+
+<script src="js/wilayas.js"></script>
+
+<script src="js/communes.js"></script>
+
+<script src="js/delivery.js"></script>
+
 <script src="js/packs.js"></script>
 
 <script src="js/app.js"></script>
+
 
 
 </body>
